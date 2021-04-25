@@ -174,13 +174,38 @@
     </header>
 
 
-    <h1>A Brief History</h1>
+    <h1>历史简介 A Brief History</h1>
 
     <hr>
-
+	
+    <h2>二次和三次方程<br>的几何解释</h2>
+	
     <h2>Geometric interpretation of <br>quadratic and cubic equations</h2>
 
     <div class="w3-responsive">
+      <p>考虑如下二次方程
+        \begin{eqnarray}\label{quad001}
+        x^2 = mx + n.
+        \end{eqnarray}
+        我们在初中就学会了如何解该方程，也就是找到满足方程
+        (\ref{quad001})的所有$x$值. 只需要使用著名的 <em>一般二次方程 </em>
+        \begin{eqnarray}\label{quad003}
+        ax^2+ bx+c = 0 .
+        \end{eqnarray}
+		的
+        <em>二次方程公式</em>
+        \begin{eqnarray}\label{quad002}
+        x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}
+        \end{eqnarray}
+        
+        将(\ref{quad001})改写为$x^2-mx-n = 0$, 我们就可以用(\ref{quad002}) 得到
+        \begin{eqnarray}\label{quad004}
+        x = \frac{ m \pm \sqrt{m^2 + 4n } }{2} = \frac{m}{2} \pm \sqrt{\frac{m^2}{4} + n}
+        \end{eqnarray}
+      </p>
+    </div>
+	
+<!--    <div class="w3-responsive">
       <p>Consider a quadratic equation
         \begin{eqnarray}\label{quad001}
         x^2 = mx + n.
@@ -203,14 +228,19 @@
         \end{eqnarray}
       </p>
     </div>
+-->
 
     <p>
+      如果画出方程(\ref{quad001})，可以看到从几何上来说它表示的是抛物线$y=x^2$ 和直线$y = mx+n$的交点。下面的小程序可以看到这一点。拖动下面的滑块，看交点$x_0$ 和 $x_1$会如何变化。
+    </p>
+    
+<!--	<p>
       If we plot equation (\ref{quad001}) we can observe geometrically that
       it represents the intersection of the parabola $y=x^2$ with the line $y = mx+n$.
       This can be appreciated in the following applet. Drag the sliders below and
       observe what happens with the intersection points $x_0$ and $x_1$.
     </p>
-
+-->
     <div class="w3-center">
 
       <div style="display:block;margin-left: auto;margin-right: auto;" id="ggb-element-01"></div>
@@ -218,8 +248,15 @@
 
 
     <br>
-
     <p>
+      你应该已经知道，有三种情况：
+      <ol>
+        <li>有两个交点，即两个解。</li>
+        <li>只有一个交点，即一个解。</li>
+        <li>没有交点，即没有解。</li>
+      </ol>
+    </p>
+<!--    <p>
       As you already noticed, we have three cases:
       <ol>
         <li>There are two points of intersection, i. e. two solutions.</li>
@@ -227,8 +264,22 @@
         <li>There are no intersection points, i. e. there are no solutions.</li>
       </ol>
     </p>
-
+-->
+	
     <p>
+      令人惊奇的是，这些东西古代人就知道了，虽然他们还没有数学符号和计算解可用。
+      我们从公元前两千年的泥板上知道，巴比伦文明就有二次方程公式（当然是文字形式的），让他们可以解二次方程。
+     但因为负数的概念还要等一千六百多年后才出现，所以巴比伦人不考虑负数解。
+      <span style="white-space: nowrap;">[<a href="#merzbach-boyer" alt="Merzbach-Boyer" title="Merzbach-Boyer">9</a>,
+        pp. 29-30]</span>.
+      我们在希腊人发明的几何学中也可找到隐含的方程，就好像在研究圆、抛物线和类似的图形时，但我们不要求每个几何问题都有解。
+      [<a href="#merzbach-boyer" alt="Merzbach-Boyer" title="Merzbach-Boyer">9</a>, Ch. 4].
+      <!--If we ask whether a particular circle and a line intersect, then the answer
+      can be "yes" or "no". And when the answer is "yes", the quadratic equation
+      for the intersection has a solution; if "no", it has no solution.-->
+    </p>
+
+<!--    <p>
       Surprisingly this has been known since ancient times,
       even without the use of mathematical symbols or computers.
       We know from clay tablets dated from around 2000 BCE that the Babylonian
@@ -249,6 +300,14 @@
     </p>
 
     <p>
+      现在回到二次方程$x^2= mx+ n$。
+      考虑$m=0$ and $n=-1$的情况。
+      用公式(\ref{quad004})可以得到
+      $$x = \pm\sqrt{-1}.$$
+      这是什么意思？
+      很多人从微积分中在者中学学过我们不能对负数取平方根？那么用几何语言怎么翻译这些值呢？我们可以将解$x = \pm\sqrt{-1}$和抛物线$y = x^2$和直线$y=-1$不相交联系起来。一般来说如果$\dfrac{m^2}{4} + n \lt 0$，则方程$x^2= mx+ n$无解。
+    </p>
+<!--    <p>
       Now let's go back to the quadratic equation $x^2= mx+ n$.
       Consider the values $m=0$ and $n=-1$.
       If we use formula (\ref{quad004}), we obtain that
@@ -263,6 +322,7 @@
       In general, if $\dfrac{m^2}{4} + n \lt 0$,
       then equation $x^2= mx+ n$ has no solutions.
     </p>
+-->
 
     <figure class="w3-center">
       <img class="w3-image w3-mobile" src="../images/chp01/quadraticminus1.svg" alt="x^2=-1" title="x^2=-1"
@@ -272,15 +332,26 @@
       </figcaption>
     </figure>
 
-
-    <p>
+<p>
+      有人说这导致了用$i$表示的新数的发明,这个数就等于$\sqrt{-1}$，被称作a“虚数”。
+      如果我们将$i$当作数，而且 $i^2 = -1$，
+      则它就是方程$x^2=-1$的解。
+    </p>
+<!--    <p>
       It is argued that this led to the invetion of a new number denoted by $i$,
       which is equal to $\sqrt{-1}$, and it was given the name "imaginary".
       If we use $i$ as a number such that $i^2 = -1$,
       then this value is the solution of the equation $x^2=-1$.
     </p>
-
+-->
     <p>
+      很多数学书也经常指出
+      <em>复数</em>，用$a + b\sqrt{-1}$表示，在解某些二次方程，例如 $x^2+1=0$，时是必须的。
+      但实际上，复数是在解三次方程的时候出现的。
+      另外，在二次方程和三次方程出现的时候，是不需要求出所有方程的解的。
+    </p>
+	
+<!--	<p>
       It is also a common practice to point out in courses of mathematics that
       <em>complex numbers</em>, denoted as $a + b\sqrt{-1}$, are needed to solve certain
       quadratic equations, such as $x^2+1=0$.
@@ -288,8 +359,19 @@
       Furthermore, when quadratic and cubic equations first appeared,
       at that time, there was no need to have solutions for all equations.
     </p>
-
+-->
+	
     <p>
+      那么是什么时候复数才变得必不可少呢？
+	  要回到这个问题，我们先考虑如下三次方程
+      \begin{eqnarray}\label{cubic001}
+      x^3 = p x + q.
+      \end{eqnarray}
+      从几何上来讲，这个方程表示立方曲线和直线 $y = px + q$的交点，
+      如下面的小程序所示。
+	  拖动滑块看会发生什么。
+    </p>
+<!--    <p>
       So where did complex numbers really come into importance? To answer this let's
       consider the cubic equation
       \begin{eqnarray}\label{cubic001}
@@ -299,7 +381,7 @@
       $y = x^3$ with the line $y = px + q$,
       as shown in the following applet. Drag sliders below and observe what happens.
     </p>
-
+-->
     <div class="w3-center">
       <div style="display:block;width:798;height:516;margin-left: auto;margin-right: auto;" id="ggb-element-02"></div>
     </div>
@@ -308,6 +390,14 @@
     <br>
 
     <p>
+      你可以看到，无论直线的参数$p$ and $q$如何定义，都会和立方曲线相交。
+      身在在直线
+      $px+q$ 和 $x$轴垂直的时候或者离原点很远的时候(即$p$和$q$ 都是很大的正数/负数时。
+	  这是一位立方曲线从$-\infty$一直延伸到$+\infty$。
+      这样，你不可能画出不和立方曲线相交的直线。
+      这和二次方程完全不一样，二次方程的曲线是抛物线$x^2$，你可以定义不和抛物线相交的直线$mx + n$。
+    </p>
+<!--   <p>
       As you can observe no matter what line is defined by the parameters $p$ and $q$,
       it will always intersect the cubic somewhere, even when the line
       $px+q$ is perpendicular to the $x$-axis and far from the origin (i. e. when
@@ -318,12 +408,29 @@
       This example is very different from the quadratic case which was a parabola $x^2$
       and you could define a line $mx + n$ such that it won't intersect the parabola.
     </p>
+-->
 
     <hr>
 
-    <h2>Solution to cubic equations</h2>
+    <h2>三次方程求解 <br> Solution to cubic equations</h2>
+
 
     <div class="w3-responsive">
+      <p>
+        众所周知，三次方程 $x^3 = px + q$的解法是文艺复新时代（十五世纪和十六世纪）意大利数学家发现的。
+		Scipione del Ferro (1465-1526) 和 Niccolò Tartaglia (1500-1557),
+        追随Girolamo Cardano (1501-1576)，证明$x^3 = px + q$
+        的解可以用
+        \begin{eqnarray}\label{cubic002}
+        x = \sqrt[3]{\frac{q}{2} + \sqrt{\frac{q^2}{4} - \frac{p^3}{27}}} -
+        \sqrt[3]{- \frac{q}{2} + \sqrt{\frac{q^2}{4} - \frac{p^3}{27}}}
+        \end{eqnarray}
+		给出。
+        改式被称作Cardano公式，这里我们用的是现代解法。
+      </p>
+    </div>
+   
+<!--    <div class="w3-responsive">
       <p>
         It is well known that the solution of the cubic $x^3 = px + q$
         was developed in the Renaissance (15th and 16th centuries) by Italian
@@ -337,7 +444,7 @@
         This is known as Cardano's formula and here we are using modern notation.
       </p>
     </div>
-
+-->
     <div class="w3-row-padding">
       <div id="phase" class="w3-half w3-container w3-margin-bottom">
         <figure class="w3-center">
@@ -361,6 +468,17 @@
     </div>
 
     <p>
+      以方程$x^3 = -6 x+ 20$看一下该方程是如何其作用的。
+      此时$p=-6$且$q=20$。如果我们将这两个数带入
+      (\ref{cubic002})，可以得到解为
+      $$x = \displaystyle \sqrt[3]{10 + \sqrt{108}} -
+      \sqrt[3]{- 10 + \sqrt{108}}.$$
+      化简后得到$x=2$，因为
+      $$8=(2)^3 = -6(2)+ 20 = -12+20=8.$$
+	  所以是方程的解。
+      这样，至少在这个例子里，公式工作得很好。
+    </p>
+<!--   <p>
       To see how this works consider the
       equation $x^3 = -6 x+ 20$.
       In this case $p=-6$ and $q=20$. If we plug these numbers into
@@ -371,16 +489,31 @@
       $$8=(2)^3 = -6(2)+ 20 = -12+20=8.$$
       Thus, this formula seems to work very well, at least for this case.
     </p>
+-->
 
     <div class="w3-padding">
       <p><strong>Excercise:</strong> Try to solve $x^3=6x+6$ using Cardano's formula.</p>
     </div>
 
     <hr>
-
-    <h2>The genesis of imaginary numbers</h2>
-
+	<h2>虚数的创世纪</h2>
+<!--
+	<h2>The genesis of imaginary numbers</h2>
+-->
+	
     <p>
+      发现Cardano's 公式后没几年，
+      意大利建筑工程师Rafael Bombelli (1526-1572)
+      发现了这个公式有一件奇怪而且矛盾的事情。
+      他考虑了如下方程：
+      \begin{eqnarray}\label{cubic003}
+      x^3= 15 x+ 4,
+      \end{eqnarray}
+      然后仔细琢磨一会，
+	  发现 $x = 4$是一个解，如图2 所示。实际上有三个解，但
+      Bombelli不考虑负数，所以我们这里也不考虑。
+    </p>
+<!--    <p>
       A few years later after the discovery of Cardano's formula,
       the Italian engineer-architect Rafael Bombelli (1526-1572)
       recognized that there was something strange and paradoxcal about this formula.
@@ -393,6 +526,7 @@
       be seen in Figure 2. In fact there are three solutions, but
       Bombelli did not consider negative values, so we won't either.
     </p>
+-->
 
     <figure class="w3-center">
       <img class="w3-image w3-mobile" src="../images/chp01/cubic-line.svg" alt="x^3=15x+4" title="x^3=15x+4"
@@ -403,6 +537,24 @@
     </figure>
 
     <div class="w3-responsive">
+      <p>
+        然后他用Cardano公式求解$x^3= 15 x+ 4$。
+        这样令$p = 15$ 且 $q=4$,
+        可以得到
+        \begin{eqnarray}\label{cubic004}
+        x = \displaystyle \sqrt[3]{2 + \sqrt{-121}} + \sqrt[3]{2 - \sqrt{-121}}.
+        \end{eqnarray}
+        这样他遇到了一个非统寻常的值。
+		如果Cardano公式是对的，
+        这个值应该等于4。
+        但这不可能，因为立方根李曼我们取了复数的平方根，在哪个时候（现在也是如此）绝对是不可能的，所以该值不可能是实数。
+        Cardano也碰到过这个困难，但他没有面对它。
+        他曾经提到过虚数，但是是和二次方程联系在一起的，并且伴之以“即难以琢磨🈶️毫无用处”的评论。[<a href="#cardano" alt="Cardano" title="Cardano">2</a>, Ch.
+        37, Rule II]
+      </p>
+    </div>
+	
+<!--	<div class="w3-responsive">
       <p>
         Then Bombelli used Cardano's formula to solve $x^3= 15 x+ 4$.
         Thus, considering $p = 15$ and $q=4$,
@@ -423,8 +575,35 @@
         37, Rule II]
       </p>
     </div>
-
+-->
     <p>
+      但是，Bombelli克服了这个苦难。他用非常不一般的方法确定了Cardano公式给出的$x$的奇怪表达式确实是实数。这是很不容易的洞见。
+	  正如Bombelli在他的著作 <em>L'Algebra</em>中说的:
+      <div style="margin-left: 30px;margin-right: 30px;">
+        <p>
+          虽然对很多人来说这看上去是很夸张的事，
+		  甚至我自己在以前也反对它，
+		  因为这太强词夺理了，
+		  所以看上去不像是真的。
+		  但是我寻找了很久，找到了证明，如下所示。
+		  ...
+		  但请读者用上自己全部的心灵力量，因为[不这样]就会觉得自己被欺骗了。
+          [<a href="bombelli" alt="Bombelli" title="Bombelli">1</a>, pp. 293-294;
+          <a href="#oconnor-robertson" alt="O'Connor-Robertson" title="O'Connor-Robertson">10</a>]
+        </p>
+      </div>
+
+      <figure class="w3-center">
+        <img class="w3-image w3-mobile" src="../images/chp01/algebra-bombelli.jpg" alt="L'Algebra" title="L'Algebra"
+          style="width:35%;">
+        <figcaption>
+          <b>Figure 5:</b> <em>L'Algebra</em> by Rafael Bombelli: frontispiece of
+          the Bologna edition of 1579.
+        </figcaption>
+      </figure>
+    </p>
+
+<!--    <p>
       However, Bombelli overcome this difficulty
       by seeing that the weird expression (\ref{cubic004})
       that Cardano's formula gives for $x$ is actually real,
@@ -452,8 +631,26 @@
         </figcaption>
       </figure>
     </p>
+-->
 
     <div class="w3-responsive">
+      <p>
+        Bombelli的伟大洞察是：将 $\sqrt{-1}$ 当作数，然后遵循特定的计算规则（和我们现在用的规则一样）进行。
+        这样他发现，
+        $$\sqrt[3]{2+ \sqrt{-121}} = 2 + \sqrt{-1} \quad \text{and} \quad \sqrt[3]{2- \sqrt{-121}} = 2 - \sqrt{-1} .$$
+        将这些值带入$$x = 2 + \sqrt{-1} + 2 - \sqrt{-1}.$$
+        然后他发现负数的平方根被抵消了
+        [<a href="#bombelli" alt="Bombelli" title="Bombelli">1</a>, p. 169;
+        <a href="#gonzalez-velasco" alt="González-velasco" title="González-Velasco">7</a>, p. 164]. 也就是说
+        $$x = 2 + \cancel{\sqrt{-1}} + 2 - \cancel{\sqrt{-1}}.$$
+        然后确定$x = 4$确实是 
+        根据Cardano公式算出的$x^3=15x+4$的解， [<a href="#bombelli" alt="Bombelli" title="Bombelli">1</a>, p. 294],
+        见图 6.
+        这个技巧只在很少的例子里奇作用，但它有助于理解虚数，可以取他们的平方根，或者在他们和实数一起出现时，可以进行运算。
+      </p>
+    </div>
+	
+<!--    <div class="w3-responsive">
       <p>
         Bombelli's great insight was simply to treat $\sqrt{-1}$ as a number and to operate with
         it following some specific arithmetic rules (the same kind of rules that we use nowdays).
@@ -473,6 +670,7 @@
         manipulate them when they appear aside real numbers.
       </p>
     </div>
+-->
 
     <div class="w3-row-padding">
       <div id="phase" class="w3-third w3-container w3-margin-bottom w3-center">
@@ -508,7 +706,17 @@
 
     </div>
 
+    
     <p>
+      当然，如图6所示，
+      Bombelli没有现代代数记法的力量（也没有计算机）可用，
+      他的计算被限制在“实际领域”。
+      实际上，哪个时候多数意大利数学家将立方和平方看作几何对象而不是代数量。
+	  但是，人们认为是他证明了三次方程根的实在性，
+	  因为他证明了虚数可以产生实数这个非凡的事实。
+    </p>
+<!--	
+	<p>
       Of course, as you can see in Figure 6, 
       Bombelli did not have at his disposal the power of today's algebraic notation
       (neither computers) and his computations were limited to numbers in "real domain".
@@ -518,7 +726,16 @@
       since he demonstrated the extraordinary fact that real numbers could be
       engendered by imaginary numbers.
     </p>
+-->
+    <p>
+      Cardano公式强迫数学家直面负数的平方根。
 
+      这个历史事件是否定广泛传播的数学是由数学家制造这一观点的例子之一。
+	  和经常出现的情况一样，是数学自身在和我们说话。
+	  从此，虚数摘去了部分神秘的面纱，但是它们被完全接受为<em>bona fide</em>的数还要等到1800年代.
+    </p>
+
+<!--
     <p>
       Cardano's formula forced mathematicians
       to confront square roots of negative numbers.
@@ -530,28 +747,52 @@
       character, although their full acceptance as <em>bona fide</em>
       numbers came only in the 1800s.
     </p>
-
+-->
     <div class="w3-padding">
       <p><strong>Excercise:</strong> Verify that $\sqrt[3]{2 \pm \sqrt{-121}} = 2 \pm \sqrt{-1}$.</p>
     </div>
 
     <hr>
 
-    <h2>The maturing of complex numbers</h2>
-
+    <h2>复数的成熟</h2>
+<!--
+	<h2>The maturing of complex numbers</h2>
+-->
+	
     <p>
+      Cardano 和 Bombelli之后，很多数学家都对虚数（或者复数）作出了重要贡献。例如笛卡尔（René Descartes (1596-1650)）在他1637年的 <em>La Géométrie</em> 这一书中创造
+      ”虚的” 这一术语，如下所示：
+
+    </p>
+<!--	<p>
       Many mathematicians after Cardano and Bombelli made important contributions to
       imaginary (or complex) numbers. For example René Descartes (1596-1650)
       coined the term "imaginary" in his book in <em>La Géométrie</em> of 1637 as follows:
 
     </p>
+-->
 
     <div style="margin-left: 30px;margin-right: 30px;">
+		
+    <p>真或假[负]根并不总是实的，有时只能是虚的。[<a href="#descartes" alt="Descartes" title="Descartes">4</a>, p. 380]
+<!--    </p>
       <p>Neither the true nor the false [negative] roots are always real; but sometimes
         only imaginary. [<a href="#descartes" alt="Descartes" title="Descartes">4</a>, p. 380]
       </p>
     </div>
+-->
 
+    <p>
+      John Wallis (1616-1703) 给出了如何用几何方法表示实习系数二次方程的虚根。
+      [<a href="#kline" alt="Kline" title="Kline">8</a>, p. 594].
+      Carpar Wessel (1745-1818) 和
+      <span style="white-space: nowrap;">Jean-Robert</span>
+      Argan (1768-1822)
+      给出了将复数表示为向量的几何方法。
+      [<a href="#gonzalez-velasco" alt="González-Velasco" title="González-Velasco">7</a>, pp. 185-190].
+    </p>
+
+<!--
     <p>
       John Wallis (1616-1703) showed how to represent geometrically complex
       roots of a quadratic equation with real coefficients
@@ -562,8 +803,7 @@
       provided geometric representations of complex numbers as vectors
       [<a href="#gonzalez-velasco" alt="González-Velasco" title="González-Velasco">7</a>, pp. 185-190].
     </p>
-
-
+-->
 
     <figure class="w3-center">
       <img class="w3-image w3-mobile" src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Leonhard_Euler.jpg"
@@ -574,15 +814,27 @@
     </figure>
 
     <p>
+      Leonard Euler (1707-1783)标准化了 "$i=\sqrt{-1}$"的记法
+      [<a href=#euleri>6</a>, p. 184] 并且用复数来解二次和三次方程，虽然他还是对这些数有所怀疑。
+      例如，在<em>Algebra</em>中，他提到：
+    </p>
+<!--	
+    <p>
       Leonard Euler (1707-1783) standirezed the notation "$i=\sqrt{-1}$"
       [<a href=#euleri>6</a>, p. 184] and used imaginary numbers to solve
       quadratic and cubic equations, in spite of the fact that he
       was still suspicious of these numbers.
       In his <em>Algebra</em>, for example, he mentioned:
     </p>
-
+-->
     <div style="margin-left: 30px;margin-right: 30px;">
-      <p>[...] since all numbers which it is possible to conceive
+      <p>[...] 因为所有可以想象的数要么大于0，要么小于0，要么就等于0，
+		  所以很明显我们不能将复数的平方根当作可能的数，
+		  这样我们必须说它是不可能的量。
+		  以这种方式我们得出了数的概念，根据数的本性这是不可能的，因此它们通常被叫做虚量，因为他们只存在于想象中。
+        [<a href="#euler-algebra" alt="Euler-Algebra" title="Euler-Algebra">5</a>, p. 43]
+      </p>
+<!--      <p>[...] since all numbers which it is possible to conceive
         are either greater or less than 0, or are 0 itself, it is
         evident that we cannot rank the square root of a negative
         number amongst possible numbers, and we must therefore
@@ -592,6 +844,7 @@
         quantities, because they exist merely in the imagination.
         [<a href="#euler-algebra" alt="Euler-Algebra" title="Euler-Algebra">5</a>, p. 43]
       </p>
+-->
     </div>
 
     <p>
