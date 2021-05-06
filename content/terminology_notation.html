@@ -164,19 +164,33 @@
 	<span id="next"><a href="geometric_interpretation_add_mult.html">&rarr;</a></span><div class="clear"></div></p></header>
         
 
-<h1>Terminology and Notation</h1>
+<h1>术语和记法 The Terminology and Notation</h1>
 
 <hr>
 
+<p><em>复数</em> $z$就是可以用$x + iy$的形式表示的数， 
+	其中$x$和$y$是实数而$i$是单元虚数，即$i^2 = -1$。
+	在该表达式中，$x$是复数的<em>实部</em>而$y$是复数的<em>虚部</em>。</p>
+	
+<!--
 <p>A <em>complex number</em> $z$ is a number that can be expressed in the form $x + iy$, where $x$ and $y$ are 
 	real numbers and $i$ is the imaginary unit, that is, $i^2 = -1$. In this expression, $x$ is 
 	the <em>real part</em> and $y$ is the <em>imaginary part</em> of the complex number.</p>
+-->
+	
+<p>复数，用$\mathbb C$表示，将一维数线的概念扩展到了二维复平面（也被称作 Argand 平面）, 
+	其中横轴被用作实部纵轴被用作虚部。
+	这样立刻可以将复数必做二维向量。
+	复数$x+iy$在复平面上可以用点$(x, y)$表示，
+	但也可以被翻译成二维向量。</p>
 
+<!--
 <p>The complex numbers, denoted by $\mathbb C$, extend the concept of the one-dimensional number line to 
 	the two-dimensional complex plane (also known as Argand plane) by using the horizontal axis for the 
 	real part and the vertical axis for the imaginary part. The analogy with two-dimensional vectors is 
 	immediate. The complex number $x+iy$ can be identified with the point $(x, y)$ in the complex plane 
 	but also it can be interpreted as a two-dimensional vector.</p>
+-->
 
 	<div class="w3-center w3-hide-small">
 		<iframe scrolling="no" title="Complex numbers: cartesian representation" src="https://www.geogebra.org/material/iframe/id/msjwbwej/width/475/height/448/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="475px" height="448px" style="border:0px;" allowfullscreen> </iframe>
@@ -194,6 +208,17 @@
 	
 
 <div class="w3-responsive">
+
+<p>引入复数的另外一种表示也很有用，这就是极坐标表示$(r, \theta)$：
+\begin{eqnarray}\label{par}
+x= r\cos \theta, \quad y=r\sin \theta \quad (r\geq 0)
+\end{eqnarray}
+这样复数可以写成另外一种形式，极坐标形式：
+\begin{eqnarray}\label{polar}
+z=x+iy=r(\cos \theta + i \sin \theta).
+\end{eqnarray}</p>
+
+<!--
 <p>It is useful to introduce another representation of complex numbers, namely
 polar coordinates $(r, \theta)$:
 \begin{eqnarray}\label{par}
@@ -203,10 +228,24 @@ Hence the complex number $z$ can be written in the alternative polar form:
 \begin{eqnarray}\label{polar}
 z=x+iy=r(\cos \theta + i \sin \theta).
 \end{eqnarray}</p>
+-->
 </div>
 
 
-<p>The radius $r$ is denoted by
+<p>半径$r$由下式确定
+$$r=\sqrt{x^2+y^2}=|z|,$$
+很自然就给出了$z$的<em>绝对值</em>的概念，用$|z|$表示, 
+也就是，它是$z$关联的向量的长度。.
+$|z|$的值经常被称作$z$的<em>模</em>。 
+<span id="phase-argument">角度$\theta$叫做$z$的<em>幅角</em> (或者<em>相位</em>) 
+	of </span> 用$\textbf{arg}(z)表示$. $z\neq 0$时， 可以用标准三角公式从(\ref{par}) 算出$\theta$的值，
+
+$$\tan \theta = \frac{y}{x}$$
+$x$, $y$所在的象限is understood as given.
+</p>
+
+
+<!--<p>The radius $r$ is denoted by
 $$r=\sqrt{x^2+y^2}=|z|$$
 and naturally gives us a notion of the <em>absolute value</em> of $z$, denoted by $|z|$, 
 that is, it is the length of the vector associated with $z$.
@@ -218,8 +257,16 @@ via standard trigonometry:
 $$\tan \theta = \frac{y}{x}$$
 where the quadrant in which $x$, $y$ lie is understood as given.
 </p>
+-->
 
-<p>At this point it is convenient to introduce a special exponential function. The
+<p>这里引入一个特殊的指数函数会带来方便。
+	极坐标指数由
+$$\cos \theta +i\sin \theta = e^{i\theta}$$定义。
+因此公式(\ref{polar})意味着$z$可以写成
+$$z=r e^{i\theta}.$$
+这个指数函数具有我们在入门微积分里很熟悉的所有标准性质，是复指数函数的特例。</p>
+
+<!--<p>At this point it is convenient to introduce a special exponential function. The
 polar exponential is defined by
 $$\cos \theta +i\sin \theta = e^{i\theta}.$$
 Hence equation (\ref{polar}) implies that $z$ can be written in the form
@@ -227,6 +274,7 @@ $$z=r e^{i\theta}.$$
 This exponential function has all of the standard properties we are familiar
 within elementary calculus and is a special case of the complex exponential
 function.</p>
+-->
 
 <div class="w3-center w3-hide-small">
 	<iframe scrolling="no" title="Complex numbers: Polar and exponential forms" src="https://www.geogebra.org/material/iframe/id/dmnwp23g/width/475/height/448/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="475px" height="448px" style="border:0px;" allowfullscreen> </iframe>
@@ -242,12 +290,35 @@ function.</p>
 	  </figure>
 </div>
 
-<p>Finally, the <em>complex conjugate</em> of $z$ is defined as
+
+<p>最后，$z$的<em>复共轭</em>被定义为
 $$\overline{z}=x-iy.$$
 </p>
 
+<!--
+<p>Finally, the <em>complex conjugate</em> of $z$ is defined as
+$$\overline{z}=x-iy.$$
+</p>
+-->
+
 <div class="w3-responsive">
-<p>Addition, subtraction, multiplication, and division of complex numbers follow
+	
+<p>复数的加减乘除遵循的规则和实数实际上一样。
+		这样，注意到$i^2=-1$，我们有
+$$z_1\pm z_2=(x_1\pm x_2)+i(y_1\pm y_2)$$
+和
+$$z_1 \cdot z_2=(x_1+iy_1)(x_2+iy_2)=(x_1x_2-y_1y_2)+i(x_1y_2+x_2y_1).$$
+现在，我们注意到
+$$z\overline{z}= (x + iy)(x − iy) = x^2+y^2=|z|^2.$$
+这一事实对复数除法有用，
+\[
+\frac{z_1}{z_2}=\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2}+i\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}.
+\]
+很容易证明加法和乘法的交换律、组合律和分配律仍然成立。
+从几何上讲，复数的加法等效于向量的平行四边形法则。
+</p>
+
+<!--<p>Addition, subtraction, multiplication, and division of complex numbers follow
 from the rules governing real numbers. Thus, noting $i^2=-1$, we have
 $$z_1\pm z_2=(x_1\pm x_2)+i(y_1\pm y_2)$$
 and
@@ -263,22 +334,46 @@ addition and multiplication hold.
 Geometrically speaking, addition of two complex numbers is equivalent to
 that of the parallelogram law of vectors.
 </p>
+-->
 </div>
 
 
 
-<p>Some of the terminology and notation used to describe complex numbers is summarized in  Figure 1.</p>
+<p>描述复数的一些术语和记法如图1所示。</p>
 
 
 <figure class="w3-center">
     <img  src="../images/chp01/sum-info.svg" alt="Summarized information" title="Summarized information" style="width:100%;">
          <figcaption>
-             <b>Figure 1:</b> Summarized information.
+             <b>图1:</b> 信息总结 Summarized information.
          </figcaption>
   </figure>
 
 <div class="w3-responsive">
-<p>I suggest you to make yourself comfortable with the concepts, terminology, and notation introduced thus far. To do so, try to convince yourself geometrically (and/or algebraically) of each of the following facts:
+	
+<p>建议让自己对目前介绍的这些概念、术语和记法滚瓜烂熟。用几何方法（和/或者代数方法）证明下列事实：
+\begin{eqnarray*}
+\textbf{Re}(z)=\frac{1}{2}\left(z+\overline{z}\right)\quad\quad \textbf{Im}(z)=\frac{1}{2i}\left(z-\overline{z}\right)\quad \quad|z|=\sqrt{x^2+y^2}
+\end{eqnarray*}
+\begin{eqnarray*}
+\tan\left(\textbf{arg}(z)\right)=\frac{\textbf{Im}(z)}{\textbf{Re}(z)}\quad \quad  re^{i\theta}=r(\cos \theta +i \sin \theta)
+\end{eqnarray*}
+\begin{eqnarray*}
+\overline{\overline{z}}=z\quad \quad \left|z_1z_2\right|=\left|z_1\right|\left|z_2\right|\quad \quad \left|\frac{z_1}{z_2}\right|=\frac{\left|z_1\right|}{\left|z_2\right|},\; (z_2\neq0)
+\end{eqnarray*}
+\begin{eqnarray*}
+\overline{z_1\pm z_2}=\overline{z_1}\pm\overline{z_2}\quad  \quad  \quad \overline{z_1z_2}=\overline{z_1}\cdot \overline{z_2}\quad  \quad \quad \overline{\left(\frac{z_1}{z_2}\right)}=\frac{\overline{z_1}}{\overline{z_2}},\; (z_2\neq0)
+\end{eqnarray*}
+\begin{eqnarray*}
+\left|z_1\pm z_2\right|\leq \left|z_1\right|+\left|z_2\right| \quad  \quad \quad \left|\left|z_1\right|-\left|z_2\right|\right|\leq \left|z_1\pm z_2\right|
+\end{eqnarray*}
+
+下式叫做<em>广义三角不等式</em>：
+\begin{eqnarray*}
+|z_1+z_2+\cdots +z_n|\leq |z_1|+ |z_2|+\cdots |z_n|
+\end{eqnarray*}
+什么时候等号成立?</p>
+<!--<p>I suggest you to make yourself comfortable with the concepts, terminology, and notation introduced thus far. To do so, try to convince yourself geometrically (and/or algebraically) of each of the following facts:
 \begin{eqnarray*}
 \textbf{Re}(z)=\frac{1}{2}\left(z+\overline{z}\right)\quad\quad \textbf{Im}(z)=\frac{1}{2i}\left(z-\overline{z}\right)\quad \quad|z|=\sqrt{x^2+y^2}
 \end{eqnarray*}
@@ -300,6 +395,7 @@ The following is called the <em>generalized triangle inequality</em>:
 |z_1+z_2+\cdots +z_n|\leq |z_1|+ |z_2|+\cdots |z_n|
 \end{eqnarray*}
 When does equality hold?</p>
+-->
 </div>
 
     <br>

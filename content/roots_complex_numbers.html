@@ -173,25 +173,58 @@
 			<span id="next"><a href="topology_complex_plane.html">&rarr;</a></span><div class="clear"></div></p></header>
         
 
-<h1>Roots of Complex Numbers</h1>
+<h1>复数的根 Roots of Complex Numbers</h1>
 
 <hr>
 
-<p>Recall that if $z=x+iy$ is a <em>nonzero</em> complex number, then it can be written in polar form as
+<p>
+	回忆一下如果$z=x+iy$是<em>非零</em> 复数，则它可以被写成极坐标形式，如下所示：
+	\[z=r(\cos \theta +i \sin \theta),\]
+	其中$r=\sqrt{x^2+y^2}$而$\theta$是从正$x$轴到从原点到点$z$的射线的夹角，单位是弧度。
+	<!--Recall that if $z=x+iy$ is a <em>nonzero</em> complex number, then it can be written in polar form as
 \[z=r(\cos \theta +i \sin \theta)\]
-where $r=\sqrt{x^2+y^2}$ and $\theta$ is the angle, in radians, from the positive $x$-axis to the ray connecting the origin to the point $z$.</p>
+where $r=\sqrt{x^2+y^2}$ and $\theta$ is the angle, in radians, from the positive $x$-axis to the ray connecting the origin to the point $z$.-->
+</p>
 
 
-<p>Now, <em>de Moivre's formula</em> establishes that if $z=r(\cos \theta +i\sin \theta)$ and $n$ is a positive integer, then
-\begin{eqnarray*}
-z^n=r^n(\cos n\theta+i\sin n\theta).
-\end{eqnarray*}</p>
+<p>
+	现在 <em>德莫福公式</em>说如果$z=r(\cos \theta +i\sin \theta)$ 且$n$是正整数则
+	\begin{eqnarray*}
+	z^n=r^n(\cos n\theta+i\sin n\theta).
+	\end{eqnarray*}
+	<!--
+		Now, <em>de Moivre's formula</em> establishes that if $z=r(\cos \theta +i\sin \theta)$ and $n$ is a positive integer, then
+	\begin{eqnarray*}
+	z^n=r^n(\cos n\theta+i\sin n\theta).
+	\end{eqnarray*}
+	-->
+	</p>
 
 
-<p>Let $w$ be a complex number. Using de Moivre's formula will help us to solve the equation $$z^n=w$$
- for $z$ when $w$ is given.</p>
+<p>
+	令$w$为复数，德莫福公式可以帮助我们在$w$给定的时候，解下列方程 $$z^n=w$$中的$z$。
+	<!-- Let $w$ be a complex number. Using de Moivre's formula will help us to solve the equation $$z^n=w$$
+ for $z$ when $w$ is given.--></p>
  
- <p>Suppose that $w=r(\cos \theta +i\sin \theta)$ and $z=\rho (\cos \psi +i\sin \psi)$. Then de Moivre's formula gives
+ <p>
+假定$w=r(\cos \theta +i\sin \theta)$ 且 $z=\rho (\cos \psi +i\sin \psi)$。
+则德莫福公式可以给出
+ $$z^n=\rho^n(\cos n\psi+i\sin n\psi).$$
+ 这样可以得出
+ $$\rho^n=r=|w|$$
+ 根据极坐标表示的唯一性和
+ $$n\psi = \theta +k(2\pi),$$
+ 其中$k$是某个整数。这样
+ <div class="w3-responsive">
+\[z=\sqrt[n]{r}\left[\cos\left(\frac{\theta}{n}+\frac{2k\pi}{n}\right)+i\sin\left(\frac{\theta}{n}+\frac{2k\pi}{n}\right) \right].\]
+</div>
+每个不同的值$k=0,1,2,\ldots ,n-1$给出一个不同的$z$。任何其他$k$值只是重复对应于 $z$ $k=0,1,2,\ldots ,n-1$的$z$值，这样一个非零复数恰好有$n$个根。</p>
+
+<p>用 <em>欧拉公式</em>:
+$$e^{i\theta}=\cos \theta +i \sin \theta,$$
+复数$z=r(\cos \theta +i\sin \theta)$也可以写成指数形式
+$$z=re^{i\theta}$$	 
+<!--Suppose that $w=r(\cos \theta +i\sin \theta)$ and $z=\rho (\cos \psi +i\sin \psi)$. Then de Moivre's formula gives
  $$z^n=\rho^n(\cos n\psi+i\sin n\psi).$$
  It follows that
  $$\rho^n=r=|w|$$
@@ -206,16 +239,28 @@ Each value of $k=0,1,2,\ldots ,n-1$ gives a different value of $z$. Any other va
 <p>Using <em>Euler's formula</em>:
 $$e^{i\theta}=\cos \theta +i \sin \theta,$$
 the complex number $z=r(\cos \theta +i\sin \theta)$ can also be written in exponential form as
-$$z=re^{i\theta}$$</p>
+$$z=re^{i\theta}$$
+--></p>
 
 
-<p>Thus, the $n$th roots of a nonzero complex number $z\neq 0$ can also be expressed as
+<p>
+ 这样非零复数$z\neq 0$的$n$次方根可以表示为
 \begin{eqnarray}\label{expform}
 z=\sqrt[n]{r}\;\mbox{exp}\left[i\left(\frac{\theta}{n}+\frac{2k\pi}{n}\right)\right]
 \end{eqnarray}
-where $k=0, 1, 2, \ldots , n-1$.</p>
+其中 $k=0, 1, 2, \ldots , n-1$.	
+<!-- Thus, the $n$th roots of a nonzero complex number $z\neq 0$ can also be expressed as
+\begin{eqnarray}\label{expform}
+z=\sqrt[n]{r}\;\mbox{exp}\left[i\left(\frac{\theta}{n}+\frac{2k\pi}{n}\right)\right]
+\end{eqnarray}
+where $k=0, 1, 2, \ldots , n-1$.
+--></p>
 
-<p>The applet below shows a geometrical representation of the $n$th roots of a complex number, up to $n=10$. Drag the red point around to change the value of $z$ or drag the sliders.
+<p>
+下面的小程序显示了一个复数的$n$次方根，一直到$n=10$。
+拖动红点改变$z$的值或者拖动滑块。
+<!--The applet below shows a geometrical representation of the $n$th roots of a complex number, up to $n=10$. Drag the red point around to change the value of $z$ or drag the sliders.
+-->
 </p>
 
 <!-- ctl=play button; sfsb=fullscreen button-->
@@ -263,8 +308,11 @@ nRoots = Sequence(r^(1 / n) * exp(  ί * ( theta / n + 2 * pi * k / n ) ), k, 0,
 <hr>
 
 <div class="w3-padding">
-<p><strong>Exercise:</strong> From the exponential form (\ref{expform})
-of the roots, show that all the $n$th roots lie on the circle $|z|=\sqrt[n]{r}$ about the origin and are equally spaced every $2\pi/n$ radians, starting with argument $\theta/n$.</p>
+<p>
+	<strong>练习:</strong> 从根的指数形式公式 (\ref{expform})
+	可以看出所有的$n$次根都在以原点为圆心的圆$|z|=\sqrt[n]{r}$上，从幅角$\theta/n$开始并且以 $2\pi/n$弧度 均匀排列，.
+	<!--<strong>Exercise:</strong> From the exponential form (\ref{expform})
+of the roots, show that all the $n$th roots lie on the circle $|z|=\sqrt[n]{r}$ about the origin and are equally spaced every $2\pi/n$ radians, starting with argument $\theta/n$.--></p>
 </div>
     
     <!--<p><strong>Note:</strong> The applet was made with <a href="https://www.geogebra.org/material/show/id/jjgznste#">GeoGebra.</a></p>-->
