@@ -183,7 +183,43 @@
 
 		<div class="w3-responsive">
 			<p>
-				$\varepsilon$ <em id="neighbourhood">neighbourhood</em>, also called
+				复数$z_0$的$\varepsilon$ <em id="neighbourhood">邻域</em>, 也叫
+				<em>开球</em> 或者 <em>开盘</em>, 包括所有在以$z_0$为圆心以$\varepsilon>0$为半径的圆内部但不在圆上的所有点，用
+				\begin{eqnarray}
+				B_{\varepsilon}(z_0)=\{z:|z-z_0| \lt \varepsilon\}
+				\end{eqnarray}
+表示。
+				 $z_0$的<em id="closed-neighbourhood">闭</em>$\varepsilon$<em>邻域</em>
+				用
+				\begin{eqnarray}
+				\overline{B}_{\varepsilon}(z_0)=\{z:|z-z_0|\leq \varepsilon\}
+				\end{eqnarray}
+				表示。
+				最后，$z_0$的<em id="deleted-neighbourhood">删除</em> $\varepsilon$ <em>邻域</em>
+				of $z_0$，也叫做a<em>穿孔球或者盘</em>, 用
+				\begin{eqnarray}
+				B_{\varepsilon}(z_0)\setminus \{z_0\}=\{z:0 \lt |z-z_0| \lt \varepsilon\}
+				\end{eqnarray}表示。
+				图1显示了下列例子的几何表示：
+
+				<ol>
+					<li>$B_{1}(0)=\{z:|z|\lt 1\}$</li>
+					<li> $\overline{B}_{\frac{7}{8}}\left(-1-\sqrt{2}i\right)=\left\{z:|z-\left(-1-\sqrt{2}i\right)|\leq
+						\frac{7}{8}\right\}$</li>
+					<li>$\overline{B}_{\frac{1}{2}}\left(2+\sqrt{3}i\right)\setminus
+						\left\{2+\sqrt{3}i\right\}=\left\{z:0
+						\lt |z-\left(2+\sqrt{3}i\right)|\leq\frac{1}{2}\right\}$</li>
+				</ol>
+
+				<figure class="w3-center">
+					<img class="w3-image w3-mobile" src="../images/chp01/balls.svg" alt="Neighbourhoods"
+						title="Neighbourhoods" style="width:70%;">
+					<figcaption>
+						<b>Figure 1:</b> 邻域的几何表示 Geometrical representation of neighbourhoods.
+					</figcaption>
+				</figure>
+				
+				<!--$\varepsilon$ <em id="neighbourhood">neighbourhood</em>, also called
 				<em>open ball</em> or <em>open disk</em>, of a complex number $z_0$ consists of all points
 				$z$ lying inside but not on a circle centred at $z_0$ and with radius
 				$\varepsilon>0$ and is expressed by
@@ -217,14 +253,14 @@
 					<figcaption>
 						<b>Figure 1:</b> Geometrical representation of neighbourhoods.
 					</figcaption>
-				</figure>
+				</figure>-->
 
 			</p>
 		</div>
 
 		<hr>
 
-		<h2>Classification of points</h2>
+		<h2>点的分类 Classification of points</h2>
 
 		<p>
 			A point $z_0$ is said to be an <em id="interior-point">interior point</em>
