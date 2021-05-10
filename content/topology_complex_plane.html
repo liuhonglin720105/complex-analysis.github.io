@@ -263,7 +263,14 @@
 		<h2>点的分类 Classification of points</h2>
 
 		<p>
-			A point $z_0$ is said to be an <em id="interior-point">interior point</em>
+			设$z_0$为一个点，$S\subset \mathbb C$是一个集合，只要存在只包含$S$内点的$z_0$的邻域，我们就称$z_0$是$S$的<em id="interior-point">内点</em>。
+			如果存在不包含$S$中点的邻域，则称之为$S$的
+						<em id="exterior-point">外点</em>。
+			如果这两点都不满足，则称$z_0$ 为$S$
+						<em id="boundary-point">边界点</em> 。
+			这样，边界点的任何邻域都至少包括一个$S$内的点和一个不在$S$内的点。所有边界点的综合体被称作$S$的
+						<em id="boundary">边界</em>。
+			<!--A point $z_0$ is said to be an <em id="interior-point">interior point</em>
 			of a set $S\subset \mathbb C$ whenever there is some neighbourhood
 			of $z_0$ that contains only points of $S$; it is called an
 			<em id="exterior-point">exterior point</em> of $S$ when
@@ -273,36 +280,43 @@
 			boundary point is, therefore, a point all of whose
 			neighbourhoods contain at least one point in $S$ and at
 			least one point not in $S$. The totality of all boundary points is called the
-			<em id="boundary">boundary</em> of $S$.
+			<em id="boundary">boundary</em> of $S$.-->
 		</p>
 
 		<div class="w3-responsive">
 			<p>
-				In this text we will use the following notation:
+				本文使用以下记号：
+								<ol>
+									<li>$\text{Int } S=\left\{z: z \text{是} S \text{的内点}\right\}$</li>
+									<li>$\text{Ext } S=\left\{z: z \text{ 是} S \text{的外点}\right\}$</li>
+									<li>$\partial S=\left\{z: z \text{ 是} S \text{的边界点}\right\}$</li>
+								</ol>
+				<!-- In this text we will use the following notation:
 				<ol>
 					<li>$\text{Int } S=\left\{z: z \text{ is an interior point of } S \right\}$</li>
 					<li>$\text{Ext } S=\left\{z: z \text{ is an exterior point of } S \right\}$</li>
 					<li>$\partial S=\left\{z: z \text{ is a boundary point of } S \right\}$</li>
 				</ol>
-			</p>
+			</p> -->
 		</div>
 		<figure class="w3-center">
 			<img class="w3-image w3-mobile" src="../images/chp01/classification.svg"
 				alt="Interior, boundary, and exterior S" title="Interior, boundary, and exterior S" style="width:60%;">
 			<figcaption>
-				<b>Figure 2:</b> Interior, boundary, and exterior of set $S$.
+				<b>Figure 2:</b> $S$的内点、边界和外点 Interior, boundary, and exterior of set $S$.
 			</figcaption>
 		</figure>
 
 		<div class="w3-responsive">
 			<p>
-				Considering the previous examples of neighbourhoods, let
+				考虑前面几个邻域的例子：
+				<!-- Considering the previous examples of neighbourhoods, let-->
 				$$
 				S_1=B_1(0),\;
 				S_2=\overline{B}_{\frac{7}{8}}\left(-1-\sqrt{2}i\right) \text{ and }
 				S_3=\overline{B}_{\frac{1}{2}}\left(2+\sqrt{3}i\right)\setminus \left\{2+\sqrt{3}i\right\}.
 				$$
-				Thus, for $S_1$ we have:
+				这样，对$S_1$，有： <!--Thus, for $S_1$ we have:-->
 				<ul>
 					<li>$\text{Int } S_1=B_1(0)$</li>
 					<li>$\text{Ext } S_1=\{z: |z|>1 \}$</li>
@@ -313,7 +327,7 @@
 
 		<div class="w3-responsive">
 			<p>
-				For $S_2$ we have:
+				对$S_2$,有：<!--For $S_2$ we have:-->
 				<ul>
 					<li>$\text{Int } S_2=B_{\frac{7}{8}}\left(-1-\sqrt{2}\right)$</li>
 					<li>$\text{Ext } S_2=\left\{z:|z-\left(-1-\sqrt{2}i\right)|>\frac{7}{8}\right\}$</li>
@@ -324,7 +338,7 @@
 
 		<div class="w3-responsive">
 			<p>
-				And finally, for $S_3$ we have:
+				最后，对$S_3$有：<!--And finally, for $S_3$ we have:-->
 				<ul>
 					<li>$\text{Int } S_3=B_{\frac{1}{2}}\left(2+\sqrt{3}\right)$</li>
 					<li>$\text{Ext } S_3=\left\{z:|z-\left(2+\sqrt{3}i\right)|>\frac{1}{2}\right\}$</li>
@@ -340,7 +354,7 @@
 
 		<hr>
 
-		<h2>Topological space</h2>
+		<h2>拓扑空间 Topological space</h2>
 
 		<p>
 			<!--
@@ -364,8 +378,15 @@ The technical definition of topology is a bit unintuitive.
 
 https://www.youtube.com/watch?v=pSjahcOnJvU
                         -->
+如果对每个$z\in S$，存在
+			$\varepsilon>0$使得
+			$$B_{\varepsilon}(z)\subset S.$$，则集合$S$是<em id="open-set">开的</em> 。
+			也就是说$\text{Int } S= S$。
 
-			A set $S$ is <em id="open-set">open</em> if for every $z\in S$, exits
+			如果一个集合$S$包括其所有边界点，则该集合是<em id="closed-set">闭的</em> ，也就是说
+			$$\partial S\subseteq S.$$
+			如果一个集合$\mathbb C$ 没有边界点，则该集合即是开的，又是闭的。
+			<!--A set $S$ is <em id="open-set">open</em> if for every $z\in S$, exits
 			$\varepsilon>0$ such that
 			$$B_{\varepsilon}(z)\subset S.$$
 			That is, $\text{Int } S= S$.
@@ -373,12 +394,21 @@ https://www.youtube.com/watch?v=pSjahcOnJvU
 			A set $S$ is <em id="closed-set">closed</em> if it contains all of its
 			boundary points, that is
 			$$\partial S\subseteq S.$$
-			The set $\mathbb C$ is both open and closed since it has no boundary points.
+			The set $\mathbb C$ is both open and closed since it has no boundary points.-->
 		</p>
 
 		<p>
+			集合 $\mathbb C$和集合组
+						$\tau =\{S\subseteq \mathbb C: S \text{是开的} \}$ 是一个
+						<a href="https://encyclopediaofmath.org/index.php?title=Topological_space" target="_blank">拓扑空间</a>，用对$\left(\mathbb C, \tau\right)$表示。
 
-			The set $\mathbb C$, together with the collection
+						拓扑空间$\left(\mathbb C, \tau\right)$要满足下列性质：；
+						<ol>
+							<li>$\emptyset$ 和$\mathbb C$ 是开的。/li>
+							<li>只要两个集合是开的，它们的并也是开的。</li>
+							<li>只要集合$S_1$ 和 $S_2$ 是开的，则 $S_1\bigcap S_2$也是开的。</li>
+						</ol>
+			<!--The set $\mathbb C$, together with the collection
 			$\tau =\{S\subseteq \mathbb C: S \text{ is open} \}$ is a
 			<a href="https://encyclopediaofmath.org/index.php?title=Topological_space" target="_blank">topological
 				space</a>, and this is expressed by the pair $\left(\mathbb C, \tau\right)$.
@@ -389,14 +419,18 @@ https://www.youtube.com/watch?v=pSjahcOnJvU
 				<li>Whenever two or more sets are open, then so is their union.</li>
 				<li>Whenever sets $S_1$ and $S_2$ are open, then so is $S_1\bigcap S_2$.</li>
 			</ol>
+			-->
 
 		</p>
 
-		<p><strong>Remark:</strong> The technical definition of topological space
+		<p>
+			<strong>备注：</strong> 拓扑空间的技术定义有点不太直观，特别是你海没有学过拓扑学的时候。
+			从本质上讲，它表达的是进行连续变换（函数或者映射）后集合$\mathbb{C}$的几何性质不变。
+			<!--<strong>Remark:</strong> The technical definition of topological space
 			is a bit unintuitive, particularly 
 			if you haven't studied topology. In essence, it states that the geometric 
 			properties of subsets of $\mathbb C$ will be preserved when continuous 
-			transformations (functions or mappings) are applied.</p>
+			transformations (functions or mappings) are applied.--></p>
 
 		<!--
 		<p>
@@ -414,32 +448,39 @@ https://www.youtube.com/watch?v=pSjahcOnJvU
 	-->
 
 		<p>
-			The <em id="closure">closure</em> of a set $S$ is the closed set
+			集合$S$的<em id="closure">闭包</em>是集合$S$中的所有点再加上$S$的边界。换句话说
+						$$\overline{S}=S\cup \partial S.$$
+			<!-- The <em id="closure">closure</em> of a set $S$ is the closed set
 			consisting of all points in $S$ together
 			with the boundary of $S$. In other words
 			$$\overline{S}=S\cup \partial S.$$
+			-->
 		</p>
 
 		<p>
-			An open set $S$ is <em id="connected-set">connected</em> if each pair of
+			如果开集$S$内任意两点$z_1$ and $z_2$ 可以用全部位于集合内首尾相连的数量有限的线段组成的折线连起来，则该集合被称为 <em id="connected-set">连通的</em>。
+			<!-- An open set $S$ is <em id="connected-set">connected</em> if each pair of
 			points $z_1$ and $z_2$ in it can be
 			joined by a polygonal line, consisting of a finite number of
 			line segments joined end to end,
 			that lies entirely in $S$.
+			-->
 		</p>
 
 		<figure class="w3-center">
 			<img class="w3-image w3-mobile" src="../images/chp01/connected-set.gif" alt="Connected set"
 				title="Connected set" style="width:60%;">
 			<figcaption>
-				<b>Figure 3:</b> Connected set.
+				<b>Figure 3:</b> 连通集 Connected set.
 			</figcaption>
 		</figure>
 
 		<p>
-			Notice for example that the open set $|z| \lt 1$ is connected.
+			例如，开集$|z| \lt 1$ 是联通的，
+						而The <em id="annulus">环</em> $1 \lt |z| \lt 2$ 是开集，也是连通的，如图4 和 5所示。
+			<!--Notice for example that the open set $|z| \lt 1$ is connected.
 			The <em id="annulus">annulus</em> $1 \lt |z| \lt 2$ is open and
-			also connected, see Figures 4 and 5.
+			also connected, see Figures 4 and 5.-->
 		</p>
 
 		<div class="w3-row-padding">
@@ -465,7 +506,12 @@ https://www.youtube.com/watch?v=pSjahcOnJvU
 		</div>
 
 		<p>
-			A nonempty open set that is
+			连通的非空开集被称作
+						<em id="domain">域</em>。在这个前提下，任何邻域都是域。域和其部分、所有边界或者域本身被称作区间<em id="region">region</em>。换句话说，内部是域的集合被称作 <em>区间</em>。
+						如果存在
+						$R>0$ 使得
+						$$S\subset B_R(0)=\{z\in \mathbb C: |z|\lt R\}$$，则集合$S$是有限的。
+			<!--A nonempty open set that is
 			connected is called a
 			<em id="domain">domain</em>. In this context, any neighbourhood is a
 			domain. A domain together with some,
@@ -474,14 +520,14 @@ https://www.youtube.com/watch?v=pSjahcOnJvU
 			words, a set whose interior is a domain is called a <em>region</em>.
 			A set $S$ is bounded if there is
 			$R>0$ such that
-			$$S\subset B_R(0)=\{z\in \mathbb C: |z|\lt R\}.$$
+			$$S\subset B_R(0)=\{z\in \mathbb C: |z|\lt R\}.$$ -->
 		</p>
 
 		<figure class="w3-center">
 			<img class="w3-image w3-mobile" src="../images/chp01/bounded.svg" alt="Bounded set" title="Bounded set"
 				style="width:50%;">
 			<figcaption>
-				<b>Figure 6:</b> Bounded set.
+				<b>Figure 6:</b> 有限集合 Bounded set.
 			</figcaption>
 		</figure>
 
@@ -508,11 +554,13 @@ https://www.youtube.com/watch?v=pSjahcOnJvU
 		-->
 
 		<div class="w3-padding">
-			<p><strong>Exercise:</strong> Sketch the set $S$ of points in
+			<p><strong>Exercise:</strong> 划出复平面上满足给定不等式的点的集合$S$。确定该集合是不是(<em>a</em>) 开的, (<em>b</em>) 闭的,
+				(<em>c</em>) 域, (<em>d</em>) 有限的, 或者 (<em>e</em>连通的。)
+				<!--Sketch the set $S$ of points in
 				the complex plane satisfying the
 				given inequality.
 				Determine whether the set is (<em>a</em>) open, (<em>b</em>) closed,
-				(<em>c</em>) a domain, (<em>d</em>) bounded, or (<em>e</em>) connected.</p>
+				(<em>c</em>) a domain, (<em>d</em>) bounded, or (<em>e</em>) connected.--></p>
 			<ul>
 				<li>$\text{Im}(z)\lt 0$</li>
 				<li>$-1\lt \text{Re(z)} \lt 1$</li>
