@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 
@@ -163,172 +163,297 @@
 </head>
 
 <body>
-<div id="wrapper">
-        
-<header><p><span id="prev"><a href="topology_complex_plane.html">&larr;</a></span>
-	<span id="title"><a href="table_of_contents.html">Complex Analysis</a></span>
-	<span id="next"><a href="riemann_sphere.html">&rarr;</a></span><div class="clear"></div></p></header>
+	<div id="wrapper">
 
-<p><img src="../images/complex_functions.png" alt="f(z)=z^2" title="f(z)=z^2"></p>
+		<header>
+			<p>
+				<span id="prev"><a href="topology_complex_plane.html">&larr;</a></span>
+				<span id="title"><a href="table_of_contents.html">Complex Analysis</a></span>
+				<span id="next"><a href="riemann_sphere.html">&rarr;</a></span><div class="clear"></div>
+			</p>
+		</header>
 
-<h1>复函数 Complex functions</h1>
+		<p><img src="../images/complex_functions.png" alt="f(z)=z^2" title="f(z)=z^2"></p>
 
-<hr>
+		<h1>复函数 Complex functions</h1>
 
-<p>Let $S$ be a set of complex numbers. A <em>function</em> $f$ defined on $S$ is a rule that assigns to each $z$ in $S$ a complex number $w$. The number $w$ is called the value of $f$ at $z$ and is denoted by $f (z)$; that is, $w = f (z)$. The set $S$ is called the domain of definition of $f$.</p>
+		<hr>
+		<p>令 $S$为复数的集合。   定义在$S$上的 <em>函数</em> $f是为$S$中每个$z$指定一个复数$w$的规则。 复数$w$被称作$f$在$z$的值，用$f (z)$表示; 也就是说$w = f (z)$. 集合$S$被称作$f$的定义域。</p>
 
-<p>If only one value of $w$ corresponds to each value of $z$, we say that $w$ is 
-	a <em>single-valued</em> function of $z$ or that $f(z)$ is single-valued. 
-	If more than one value of $w$ corresponds to each value of $z$, we say 
-	that $w$ is a <em>multiple-valued</em> or <em>many-valued</em> function of $z$.
-</p>
+		<!--<p>Let $S$ be a set of complex numbers. A <em>function</em> $f$ defined on $S$ is a rule that assigns to each $z$ in $S$ a complex number $w$. The number $w$ is called the value of $f$ at $z$ and is denoted by $f (z)$; that is, $w = f (z)$. The set $S$ is called the domain of definition of $f$.</p> -->
 
-<p>
-A <em>multiple-valued</em> function can be considered as a collection of 
-single-valued functions, each member of which is called a <em>branch</em> 
-of the function. In general, we consider one particular member as a 
-<em>principal branch</em> of the multiple-valued function and the value 
-of the function corresponding to this branch as the <em>principal value</em>.
-</p>
+		<p>
+			如果每个$z$值只对应一个$w$值，
+			我们称$w$是$z$的<em>单值</em> 函数或者说$f(z)$是单值的。
+			如果$z$的每个值对应与多个$w$值，
+			我们说 $w$是 <em>多值的multiple-valued</em> 或者$z$的 <em>多值</em> 函数。
+		</p>
+		<!--
+		If only one value of $w$ corresponds to each value of $z$, we say that $w$ is
+		a <em>single-valued</em> function of $z$ or that $f(z)$ is single-valued.
+		If more than one value of $w$ corresponds to each value of $z$, we say
+		that $w$ is a <em>multiple-valued</em> or <em>many-valued</em> function of $z$.
+	-->
+		<p>
+			一个<em>多值</em> 函数可以被看作单值函数的集合，
+			集合的每个成员被叫做函数的 <em>分支</em>。
+			一般情况下，我们将某个特定成员函数当作多值函数的<em>主分支</em>，
+			对应于该分支的函数被称作 <em>主值</em>。
+		</p>
+		<!--
+		<p>
+		A <em>multiple-valued</em> function can be considered as a collection of
+		single-valued functions, each member of which is called a <em>branch</em>
+		of the function. In general, we consider one particular member as a
+		<em>principal branch</em> of the multiple-valued function and the value
+		of the function corresponding to this branch as the <em>principal value</em>.
+		</p>
 
-<div class="w3-padding">
-<p>
-<strong>Example 1:</strong> The function $w=z^2$ is a single-valued function of $z$. On the other hand, if $w=z^{\frac{1}{2}},$ then to each value of $z$ there are two values of $w$. Hence, the function $$w=z^{\frac{1}{2}}$$ is a multiple-valued (in this case two-valued) function of $z$.
-</p>
-</div>
+	-->
+		<div class="w3-padding">
+			<p>
+				<strong>例 1:</strong> 函数 $w=z^2$ 是$z$的单值函数。而如果$w=z^{\frac{1}{2}},$ 则每个$z$值又两个$w$值。
+				因此，函数$$w=z^{\frac{1}{2}}$$ 是$z$的多值函数（这里是双值函数）。
+			</p><!--<strong>Example 1:</strong> The function $w=z^2$ is a single-valued function of $z$. On the other hand, if $w=z^{\frac{1}{2}},$ then to each value of $z$ there are two values of $w$. Hence, the function $$w=z^{\frac{1}{2}}$$ is a multiple-valued (in this case two-valued) function of $z$.-->
+		</div>
 
-<p>Suppose that $w=u+iv$ is the value of a function $f$ at $z= x+iy$, so that
-$$u+iv=f(x+iy)$$
-Each of the real numbers $u$ and $v$ depends on the real variables $x$ and $y$, and it
-follows that $f(z)$ can be expressed in terms of a pair of real-valued functions of
-the real variables $x$ and $y$:
-\begin{eqnarray}\label{eq1}
-f(z)= u(x,y)+iv(x,y).
-\end{eqnarray}
-If the polar coordinates $r$ and $\theta$, instead of $x$ and $y$ , are used, then
-$$u+iv=f\left(re^{i\theta}\right)$$
-where $w=u+iv$ and $z=re^{i\theta}$. In this case, we write
-\begin{eqnarray}\label{eq2}
-f(z)=u\left(r, \theta\right)+iv\left(r, \theta\right).
-\end{eqnarray}
-</p>
+		<p>
+			假定$w=u+iv$ 是函数$f$ 在 $z= x+iy$的值，也就是
+			$$u+iv=f(x+iy)$$
+			各个实数$u$ 和 $v$ 取决于实变量$x$ 和 $y$,
+			这样$f(z)$可以被表示为实变量$x$和$y$的实值函数对：
+			\begin{eqnarray}\label{eq1}
+			f(z)= u(x,y)+iv(x,y).
+			\end{eqnarray}
+			如果用极坐标$r$ 和 $\theta$, 而不是 $x$ 和 $y$ ,则
+			$$u+iv=f\left(re^{i\theta}\right)$$
+			其中 $w=u+iv$ 且 $z=re^{i\theta}$. 在这种情况下，可以写成
+			\begin{eqnarray}\label{eq2}
+			f(z)=u\left(r, \theta\right)+iv\left(r, \theta\right).
+			\end{eqnarray}
+			<!--
+			Suppose that $w=u+iv$ is the value of a function $f$ at $z= x+iy$, so that
+		$$u+iv=f(x+iy)$$
+		Each of the real numbers $u$ and $v$ depends on the real variables $x$ and $y$, and it
+		follows that $f(z)$ can be expressed in terms of a pair of real-valued functions of
+		the real variables $x$ and $y$:
+		\begin{eqnarray}\label{eq1}
+		f(z)= u(x,y)+iv(x,y).
+		\end{eqnarray}
+		If the polar coordinates $r$ and $\theta$, instead of $x$ and $y$ , are used, then
+		$$u+iv=f\left(re^{i\theta}\right)$$
+		where $w=u+iv$ and $z=re^{i\theta}$. In this case, we write
+		\begin{eqnarray}\label{eq2}
+		f(z)=u\left(r, \theta\right)+iv\left(r, \theta\right).
+		\end{eqnarray}
+		-->
+		</p>
 
-<div class="w3-padding w3-responsive">
-    <p>
-    <strong>Example 2:</strong> If $f(z)= z^2$ then
-    $$f(x+iy)=(x+iy)^2=x^2-y^2+i(2xy).$$
-    Hence
-    $$u(x,y)= x^2-y^2\quad \text{and}\quad v(x,y)= 2xy.$$
-    When we use polar coordinates, we have
-    $$u\left(r, \theta\right)= r^2\cos 2\theta \quad \text{and}\quad v\left(r, \theta\right)= r^2\sin 2\theta.$$
-    </p>
-</div>
+		<div class="w3-padding w3-responsive">
+			<p>
+				<strong>例 2:</strong> 如果 $f(z)= z^2$ 则
+				$$f(x+iy)=(x+iy)^2=x^2-y^2+i(2xy).$$
+				因此
+				$$u(x,y)= x^2-y^2\quad \text{and}\quad v(x,y)= 2xy.$$
+				如果用极坐标，有
+				$$u\left(r, \theta\right)= r^2\cos 2\theta \quad \text{and}\quad v\left(r, \theta\right)= r^2\sin 2\theta.$$
+			</p>
 
- <p><strong>Question:</strong> What happens when in either of equations (\ref{eq1}) and (\ref{eq2}) the function $v$ always has a value zero?</p>
+			<!--
+			<p>
+			<strong>Example 2:</strong> If $f(z)= z^2$ then
+			$$f(x+iy)=(x+iy)^2=x^2-y^2+i(2xy).$$
+			Hence
+			$$u(x,y)= x^2-y^2\quad \text{and}\quad v(x,y)= 2xy.$$
+			When we use polar coordinates, we have
+			$$u\left(r, \theta\right)= r^2\cos 2\theta \quad \text{and}\quad v\left(r, \theta\right)= r^2\sin 2\theta.$$
+		</p>
 
-<hr>
+		-->
+		</div>
 
-<h2>Examples of complex functions</h2>
-<br>
-<h4 style="text-align:left">Polynomial functions</h4>
-<p> For $a_n, a_{n-1}, \ldots, a_0$ complex constants we define
-$$p(z) = a_n z^n + a_{n-1} z^{n-1} +\cdots +a_{1}z + a_0$$
-where  $a_n\neq 0$ and $n$ is a positive integer
-called the <em>degree</em> of the polynomial $p(z)$.
-</p>
+		<p><strong>问题:</strong> 如果方程(\ref{eq1}) and (\ref{eq2})中函数$v$的值总是零会出现什么情况?</p>
+		<!--
+		<p><strong>Question:</strong> What happens when in either of equations (\ref{eq1}) and (\ref{eq2}) the function $v$ always has a value zero?</p>
+	-->
+		<hr>
 
-<p><em>Rational functions:</em> Ratios
-	$$\frac{p(z)}{q(z)}$$
-	where $p(z)$ and $q(z)$ are polynomials and $q(z)\neq 0$.
-</p>
-
-<h4 style="text-align:left">Exponential function</h4> 
-
-<p><em>Exponential function:</em> If $z=x+iy$, the exponential 
-	function $e^z$ is defined by writing
-	\begin{eqnarray*}
-	e^z=e^xe^{iy}.
-	\end{eqnarray*}
-	Because
-	\begin{eqnarray*}
-	e^{iy}=\cos y +i\sin y,
-	\end{eqnarray*}
-	then we have
-	\begin{eqnarray*}
-	e^z=e^x\left(\cos y +i\sin y\right).
-	\end{eqnarray*}
-</p>
-
-<h4 style="text-align:left">Logarithmic function</h4> 
-
-<p> In a similar fashion, the complex logarithm is a complex extension
-	of the usual real natural (i.e., base $e$) logarithm. In terms of polar coordinates
-	$z = r e^{i\theta}$, the complex logarithm has the form
-	$$\log z = \log\left(r e^{i\theta}\right) = \log r + \log e^{i\theta}= \log r + i \theta.$$
-	We will explore in detail this function in the following section.
+		<h2>复函数的例子 Examples of complex functions</h2>
+		<br>
+		<h4 style="text-align:left">多项式 Polynomial functions</h4>
+		<p>
+			对复常数 $a_n, a_{n-1}, \ldots, a_0$我们定义
+			$$p(z) = a_n z^n + a_{n-1} z^{n-1} +\cdots +a_{1}z + a_0$$
+			其中  $a_n\neq 0$ 且 $n$ 是正整数
+			为多项式 $p(z)$<em>阶数</em>。
+		</p>
+		<!--
+	<p>
+		For $a_n, a_{n-1}, \ldots, a_0$ complex constants we define
+		$$p(z) = a_n z^n + a_{n-1} z^{n-1} +\cdots +a_{1}z + a_0$$
+		where  $a_n\neq 0$ and $n$ is a positive integer
+		called the <em>degree</em> of the polynomial $p(z)$.
 	</p>
 
-<h4 style="text-align:left" id="trig-functions">Trigonometric functions</h4>
-
-<p> The sine and cosine of a complex variable 
-	$z$ are defined as follows:
-\begin{eqnarray*}
-\sin z=\frac{e^{i z}-e^{-iz}}{2i}\quad \text{and}\quad  \cos z=\frac{e^{iz} +e^{-i z}}{2}.
-\end{eqnarray*}
-
-The other four trigonometric functions are defined in terms of the sine and cosine functions with  the following  relations:
-\begin{align*}
-\tan z&=\frac{\sin z}{\cos z}     &   \cot z&=\frac{\cos z}{\sin z}         \\
-\sec z&=\frac{1}{\cos z}        &  \csc z&=\frac{1}{\sin z}.
-\end{align*}
-</p>
-
-<h4 style="text-align:left">Hyperbolic trigonometric functions</h4> 
-
-<p>The hyperbolic sine and the hyperbolic cosine of a complex variable are defined as
-they are with a real variable; that is,
-\begin{eqnarray*}
-\sinh z=\frac{e^{z}-e^{-z}}{2}\quad \text{and}\quad  \cosh z=\frac{e^{z} +e^{- z}}{2}.
-\end{eqnarray*}
 
 
-The other four hyperbolic functions are defined in terms of the hyperbolic sine and cosine functions 
-with the relations:
-\begin{align*}
-\tanh z&=\frac{\sinh z}{\cosh z}   &   \coth z&=\frac{\cosh z}{\sinh z}     \\
-\text{sech } z&=\frac{1}{\cosh z}       &  \text{csch } z&=\frac{1}{\sinh z}.
-\end{align*}
-</p>
+	-->
+		<!--<p>
+		<em>Rational functions:</em> Ratios
+		$$\frac{p(z)}{q(z)}$$
+		where $p(z)$ and $q(z)$ are polynomials and $q(z)\neq 0$.
+	</p>
+	-->
 
-<hr>
+		<p>
+			<em>有理函数：</em> 比例
+			$$\frac{p(z)}{q(z)}$$
+			其中 $p(z)$ 和 $q(z)$ 是多项式且$q(z)\neq 0$。
+		</p>
 
-<h2>Explore the real and imaginary components</h2>
+		<h4 style="text-align:left">Exponential function</h4>
 
-<p>Use the following applet to explore the real and imaginary components of some complex functions</p>
+		<p>
+			<em>指数函数：</em> 如果 $z=x+iy$, 指数函数$e^z$被定义为
+			\begin{eqnarray*}
+			e^z=e^xe^{iy}.
+			\end{eqnarray*}
+			因为
+			\begin{eqnarray*}
+			e^{iy}=\cos y +i\sin y,
+			\end{eqnarray*}
+			所以有
+			\begin{eqnarray*}
+			e^z=e^x\left(\cos y +i\sin y\right).
+			\end{eqnarray*}
+		</p>
 
-<div class="w3-center w3-hide-small">
-    <!--<iframe scrolling="no" title="Real and Imaginary components" src="https://www.geogebra.org/material/iframe/id/vgbbnfp9/width/772/height/541/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/true" width="772px" height="541px" style="border:0px;"> </iframe>-->
-    <div style="display:block" id="ggb-element"></div>
-    
-    <!--<div class="w3-container w3-center">
-        <button onclick="var ifr=document.getElementsByName('JoukAirfoil')[0]; ifr.src=ifr.src;" class="w3-btn w3-ripple w3-grey w3-hover-text-white">Reset</button>
-         
-         <a href="../applets/p5js/joukowsky/index.html" class="w3-btn w3-ripple w3-grey w3-hover-text-white" target="_blank">Open other tab</a>
-    </div>-->
-    
-</div>
+		<!--<p>
+		<em>Exponential function:</em> If $z=x+iy$, the exponential
+		function $e^z$ is defined by writing
+		\begin{eqnarray*}
+		e^z=e^xe^{iy}.
+		\end{eqnarray*}
+		Because
+		\begin{eqnarray*}
+		e^{iy}=\cos y +i\sin y,
+		\end{eqnarray*}
+		then we have
+		\begin{eqnarray*}
+		e^z=e^x\left(\cos y +i\sin y\right).
+		\end{eqnarray*}
+	</p>
+	-->
 
-<br>
+		<h4 style="text-align:left">对数函数 Logarithmic function</h4>
 
-<div class="w3-hide-large w3-hide-medium w3-khaki w3-round w3-padding w3-panel">
-    <p><i class="fas fa-sad-tear"></i> Sorry, the applet is  not supported for small screens. Rotate your device to landscape. Or resize your window so it's more wide than tall.</p>
-</div>
+		<p>
+			用类似的方法，复对数是对实自然对数(即底为 $e$)的复扩展。
+			用极坐标
+			$z = r e^{i\theta}$表示, 复对数具有以下形式
+			$$\log z = \log\left(r e^{i\theta}\right) = \log r + \log e^{i\theta}= \log r + i \theta.$$
+			我们会在下一节详细研究该函数。
+		</p>
 
-<div class="w3-padding w3-hide-small">
-<details>
-    <summary class="w3-hover-text-blue"><strong>Code</strong></summary>
-    <br>
-    <p>Enter the following scripts in <a href="https://www.geogebra.org/classic#3d" target="_blank">GeoGebra</a> to explore it yourself. Open the 3D view. The symbol # indicates comments.</p>
+		<!--<p>
+		In a similar fashion, the complex logarithm is a complex extension
+		of the usual real natural (i.e., base $e$) logarithm. In terms of polar coordinates
+		$z = r e^{i\theta}$, the complex logarithm has the form
+		$$\log z = \log\left(r e^{i\theta}\right) = \log r + \log e^{i\theta}= \log r + i \theta.$$
+		We will explore in detail this function in the following section.
+		</p>
+		-->
+		<h4 style="text-align:left" id="trig-functions">三角函数 Trigonometric functions</h4>
+
+		<p>
+			复变量的正弦函数和余弦函数定义如下：
+			\begin{eqnarray*}
+			\sin z=\frac{e^{i z}-e^{-iz}}{2i}\quad \text{and}\quad  \cos z=\frac{e^{iz} +e^{-i z}}{2}.
+			\end{eqnarray*}
+
+			其他四个三角函数用正弦和余弦函数定义，关系如下：
+			\begin{align*}
+			\tan z&=\frac{\sin z}{\cos z}     &   \cot z&=\frac{\cos z}{\sin z}         \\
+			\sec z&=\frac{1}{\cos z}        &  \csc z&=\frac{1}{\sin z}.
+			\end{align*}
+
+			<!--The sine and cosine of a complex variable
+			$z$ are defined as follows:
+			\begin{eqnarray*}
+			\sin z=\frac{e^{i z}-e^{-iz}}{2i}\quad \text{and}\quad  \cos z=\frac{e^{iz} +e^{-i z}}{2}.
+			\end{eqnarray*}
+
+			The other four trigonometric functions are defined in terms of the sine and cosine functions with  the following  relations:
+			\begin{align*}
+			\tan z&=\frac{\sin z}{\cos z}     &   \cot z&=\frac{\cos z}{\sin z}         \\
+			\sec z&=\frac{1}{\cos z}        &  \csc z&=\frac{1}{\sin z}.
+			\end{align*}
+			-->
+		</p>
+
+		<h4 style="text-align:left">双曲三角函数 Hyperbolic trigonometric functions</h4>
+
+		<p>
+			复变量的双曲正弦和余弦函数和实变量一样，即：
+			\begin{eqnarray*}
+			\sinh z=\frac{e^{z}-e^{-z}}{2}\quad \text{and}\quad  \cosh z=\frac{e^{z} +e^{- z}}{2}.
+			\end{eqnarray*}
+
+
+			其他四个双曲函数用双曲正弦和余弦函数定义，关系如下：
+			\begin{align*}
+			\tanh z&=\frac{\sinh z}{\cosh z}   &   \coth z&=\frac{\cosh z}{\sinh z}     \\
+			\text{sech } z&=\frac{1}{\cosh z}       &  \text{csch } z&=\frac{1}{\sinh z}.
+			\end{align*}
+
+			<!--The hyperbolic sine and the hyperbolic cosine of a complex variable are defined as
+			they are with a real variable; that is,
+			\begin{eqnarray*}
+			\sinh z=\frac{e^{z}-e^{-z}}{2}\quad \text{and}\quad  \cosh z=\frac{e^{z} +e^{- z}}{2}.
+			\end{eqnarray*}
+
+
+			The other four hyperbolic functions are defined in terms of the hyperbolic sine and cosine functions
+			with the relations:
+			\begin{align*}
+			\tanh z&=\frac{\sinh z}{\cosh z}   &   \coth z&=\frac{\cosh z}{\sinh z}     \\
+			\text{sech } z&=\frac{1}{\cosh z}       &  \text{csch } z&=\frac{1}{\sinh z}.
+			\end{align*}
+			-->
+		</p>
+
+		<hr>
+
+		<h2>探索函数的实部和虚部 Explore the real and imaginary components</h2>
+
+		<p>
+			用下列小程序探索一些函数的实部和虚部
+			<!--Use the following applet to explore the real and imaginary components of some complex functions-->
+		</p>
+
+		<div class="w3-center w3-hide-small">
+			<!--<iframe scrolling="no" title="Real and Imaginary components" src="https://www.geogebra.org/material/iframe/id/vgbbnfp9/width/772/height/541/border/888888/sfsb/false/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/true" width="772px" height="541px" style="border:0px;"> </iframe>-->
+			<div style="display:block" id="ggb-element"></div>
+
+			<!--<div class="w3-container w3-center">
+			<button onclick="var ifr=document.getElementsByName('JoukAirfoil')[0]; ifr.src=ifr.src;" class="w3-btn w3-ripple w3-grey w3-hover-text-white">Reset</button>
+
+			 <a href="../applets/p5js/joukowsky/index.html" class="w3-btn w3-ripple w3-grey w3-hover-text-white" target="_blank">Open other tab</a>
+		</div>-->
+
+		</div>
+
+		<br>
+
+		<div class="w3-hide-large w3-hide-medium w3-khaki w3-round w3-padding w3-panel">
+			<p><i class="fas fa-sad-tear"></i> Sorry, the applet is  not supported for small screens. Rotate your device to landscape. Or resize your window so it's more wide than tall.</p>
+		</div>
+
+		<div class="w3-padding w3-hide-small">
+			<details>
+				<summary class="w3-hover-text-blue"><strong>Code</strong></summary>
+				<br>
+				<p>Enter the following scripts in <a href="https://www.geogebra.org/classic#3d" target="_blank">GeoGebra</a> to explore it yourself. Open the 3D view. The symbol # indicates comments.</p>
 
 <pre><code>#Define complex function
     
@@ -340,31 +465,30 @@ Re = Surface(u, v, real( f(u + ί v) ), u, -5, 5, v, -5, 5)
 
 Im = Surface(u, v, imaginary( f(u + ί v) ), u, -5, 5, v, -5, 5)
 </code></pre>
-</details>
-</div>
+			</details>
+		</div>
 
-<br>
+		<br>
 
 
-    
-   <!-- <p><strong>Note:</strong> The applet was made with <a href="https://www.geogebra.org/material/show/id/y9pnh3hu">GeoGebra</a>.</p>-->
 
-	<!-- link to the next page -->
-	<a href="riemann_sphere.html"><p class="nextPage">NEXT: Riemann Sphere</p></a>
-	<footer>
-		<p>[ <a href="../">intro</a>, <a href="https://github.com/complex-analysis">source</a>, <a href="https://github.com/complex-analysis/complex-analysis.github.io/issues">issues</a> ]</p>
+		<!-- <p><strong>Note:</strong> The applet was made with <a href="https://www.geogebra.org/material/show/id/y9pnh3hu">GeoGebra</a>.</p>-->
+		<!-- link to the next page -->
+		<a href="riemann_sphere.html"><p class="nextPage">NEXT: Riemann Sphere</p></a>
+		<footer>
+			<p>[ <a href="../">intro</a>, <a href="https://github.com/complex-analysis">source</a>, <a href="https://github.com/complex-analysis/complex-analysis.github.io/issues">issues</a> ]</p>
 
-		<p class="license">
-			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-				<img id="license" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
-			</a>
-		<br/>
-		<strong style="font-size: 18px">ISBN: 978-0-6485736-0-9</strong> <br>
-		<strong style="font-size: 18px">2019</strong> 
-	    </p>
-	</footer>
+			<p class="license">
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+					<img id="license" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png">
+				</a>
+				<br />
+				<strong style="font-size: 18px">ISBN: 978-0-6485736-0-9</strong> <br>
+				<strong style="font-size: 18px">2019</strong>
+			</p>
+		</footer>
 
-</div> <!-- end wrapper -->
+	</div> <!-- end wrapper -->
 
 <!-- nice smart quotes, via: http://smartquotesjs.com -->
 <script src="../js/smartquotes.min.js"></script>
