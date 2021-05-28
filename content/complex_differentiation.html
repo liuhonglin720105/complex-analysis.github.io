@@ -185,7 +185,7 @@
 
 
 		<p>
-			复函数$f(z)$ 在点$z_0\in mathbb C$ <em>可微</em>当且仅当下列商的极限存在
+			复函数$f(z)$ 在点$z_0\in \mathbb C$ <em>可微</em>当且仅当下列商的极限存在
 			<div class="w3-responsive">
 				\begin{eqnarray}\label{diff01}
 				f'(z_0) = \lim_{z \rightarrow z_0} \frac{f(z)-f(z_0)}{z-z_0}.
@@ -276,19 +276,18 @@
 
 		<hr>
 
-		<h2>Cauchy-Riemann equations</h2>
+		<h2>柯西-黎曼公式Cauchy-Riemann equations</h2>
 
 		<p>
-			To understand the consequences of this definition (\ref{diff01}), let us first see what happens when
-			we approach $z_0$ along the two simplest directions - horizontal and vertical. If
-			we set
+			要理解定义(\ref{diff01})的后果，让我们先看看沿着两个最简单的方向：水平和垂直方向趋于$z_0$会发生什么。
+			如果我们设
 			$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
-			then $z \rightarrow z_0$ along a horizontal line as $h\rightarrow 0.$
-			If we write out
+			则 $z \rightarrow z_0$ 随着$h\rightarrow 0$时沿着水平方向移动。
+			如果我们用实部和虚部表示
 			$$f(z) = u(x,y)+iv(x,y)$$
-			in terms of its real and imaginary parts, then
+			则
 			$$f'(z_0)= \lim_{h \rightarrow 0}\frac{f(z_0+h)-f(z_0)}{h}$$
-			then
+			那么
 			<div class="w3-responsive">
 				\begin{eqnarray*}
 				f'(z_0)&amp;= &amp; \lim_{h \rightarrow 0} \frac{f(z_0+h)-f(z_0)}{h} = \lim_{h \rightarrow 0}
@@ -299,13 +298,40 @@
 				&amp;= &amp; u_x(x_0, y_0)+ i v_x(x_0,y_0)
 				\end{eqnarray*}
 			</div>
+
+			<!--To understand the consequences of this definition (\ref{diff01}), let us first see what happens when
+	we approach $z_0$ along the two simplest directions - horizontal and vertical. If
+	we set
+	$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
+	then $z \rightarrow z_0$ along a horizontal line as $h\rightarrow 0.$
+	If we write out
+	$$f(z) = u(x,y)+iv(x,y)$$
+	in terms of its real and imaginary parts, then
+	$$f'(z_0)= \lim_{h \rightarrow 0}\frac{f(z_0+h)-f(z_0)}{h}$$
+	then
+	<div class="w3-responsive">
+		\begin{eqnarray*}
+		f'(z_0)&amp;= &amp; \lim_{h \rightarrow 0} \frac{f(z_0+h)-f(z_0)}{h} = \lim_{h \rightarrow 0}
+		\frac{f(x_0+h + iy_0)-f(x_0+iy_0)}{h} \\
+		&amp;= &amp; \lim_{h \rightarrow 0} \left[ \frac{u \left( x_0 +h, y_0 \right) - u \left( x_0 , y_0
+		\right)}{h}\right]+i \lim_{h \rightarrow 0} \left[ \frac{v \left( x_0 +h, y_0 \right) - v \left( x_0 ,
+		y_0 \right)}{h}\right] \\
+		&amp;= &amp; u_x(x_0, y_0)+ i v_x(x_0,y_0)
+		\end{eqnarray*}
+	</div>-->
 		</p>
 		<p>
-			where $u_x(x_0, y_0)$ and $v_x(x_0,y_0)$ denote the first-order partial derivatives with respect
-			to $x$ of the function $u$ and $v$, respectively, at $(x_0, y_0)$.
-			If now we set
+			其中 $u_x(x_0, y_0)$ 和$v_x(x_0,y_0)$分别表示在$(x_0,y_0)处$函数$u$和$v$关于$x$的偏导 。
+			现在如果设
 			$$z = z_0+ik = x_0 + i(y_0+k), \quad k\in \mathbb R,$$
-			then $z\rightarrow 0$ along a vertical line as $k\rightarrow 0$. Therefore, we also have
+			则随着$k\rightarrow 0$，沿着垂直线$z\rightarrow 0$ $k\rightarrow 0$。因此，我们有
+
+			<!--where $u_x(x_0, y_0)$ and $v_x(x_0,y_0)$ denote the first-order partial derivatives with respect
+	to $x$ of the function $u$ and $v$, respectively, at $(x_0, y_0)$.
+	If now we set
+	$$z = z_0+ik = x_0 + i(y_0+k), \quad k\in \mathbb R,$$
+	then $z\rightarrow 0$ along a vertical line as $k\rightarrow 0$. Therefore, we also have
+	-->
 			<div class="w3-responsive">
 				\begin{eqnarray*}
 				f'(z_0)&amp;= &amp; \lim_{k \rightarrow 0} \frac{f(z_0+ik)-f(z_0)}{ik} = \lim_{k \rightarrow 0} \left[
@@ -317,19 +343,39 @@
 			</div>
 		</p>
 		<p>
-			where the partial derivatives of $u$ and $v$ are, this time, with respect to $y$.
-			When we equate the real and imaginary parts of these two formulae for the complex derivative
-			$f'(z_0)$, we discover that the real and components of $f(z)$ must satisfy a
-			homogeneous linear system of partial differential equations:
+			这次 $u$ 和 $v$的偏导是关于$y$的。
+			然后令复导数$f'(z_0)$的这两个方程的实部和虚部相等，
+			我们发现$f(z)$的实部和虚部必须满足均匀线性系统的偏微分方程
 			$$u_x=v_y, \quad u_y=-v_x.$$
-			These are the <em>Cauchy-Riemann equations</em> named after the famous nineteenth
-			century mathematicians Augustin-Louis Cauchy and Bernhard Riemann, two of the
-			founders of modern complex analysis.
+			这就是 <em>柯西-黎曼公式</em>，以著名数学家，现代复分析的两个创始人，
+			Augustin-Louis Cauchy 和 Bernhard Riemann命名。
+
+			<!--where the partial derivatives of $u$ and $v$ are, this time, with respect to $y$.
+	When we equate the real and imaginary parts of these two formulae for the complex derivative
+	$f'(z_0)$, we discover that the real and components of $f(z)$ must satisfy a
+	homogeneous linear system of partial differential equations:
+	$$u_x=v_y, \quad u_y=-v_x.$$
+	These are the <em>Cauchy-Riemann equations</em> named after the famous nineteenth
+	century mathematicians Augustin-Louis Cauchy and Bernhard Riemann, two of the
+	founders of modern complex analysis.
+	-->
 		</p>
 
 		<div class="w3-responsive">
 			<p class="theorem">
-				<strong>Theorem 1:</strong> <em>
+				<strong>定理 1:</strong> <em>
+					复函数 $f(z)=u(x,y)+iv(x,y)$
+					有复导数$f'(z)$当且仅当其实部和虚部连续可微且满足
+				</em>柯西-黎曼公式
+				\begin{eqnarray*}
+				u_x=v_y, \quad u_y=-v_x
+				\end{eqnarray*}
+				<em>
+					如果这样，$f(z)$的复导数等于下列任何表达式：
+					$$f'(z)=u_x+iv_x = v_y - i u_y.$$
+				</em>
+
+				<!--<strong>Theorem 1:</strong> <em>
 					A complex function $f(z)=u(x,y)+iv(x,y)$
 					has a complex derivative $f'(z)$ if and only if its real and imaginary part are
 					continuously differentiable and satisfy
@@ -342,13 +388,23 @@
 					expressions:
 					$$f'(z)=u_x+iv_x = v_y - i u_y.$$
 				</em>
+				-->
 			</p>
 		</div>
 		<br />
 
 		<div class="w3-padding">
 			<p>
-				<strong>Example:</strong> Consider the function $f(z)=z^2$, which can be written as
+				<strong>例:</strong> 考虑函数 $f(z)=z^2$, 可以写成
+				$$z^2 = \left(x^2-y^2\right)+ i \left(2xy\right).$$
+				其实部$u = x^2-y^2$和虚部$v=2xy$满足柯西-黎曼公式，也就是
+				$$u_x=2x = v_y, \quad u_y = -2y = -v_x.$$
+				定理1意味着$f(z)=z^2$是可微的，其导数等于
+				<div class="w3-responsive">
+					$$f'(z)=u_x+iv_x = v_y - i u_y = 2x + i 2y = 2(x+iy) = 2z.$$
+				</div>
+
+				<!--<strong>Example:</strong> Consider the function $f(z)=z^2$, which can be written as
 				$$z^2 = \left(x^2-y^2\right)+ i \left(2xy\right).$$
 				Its real part $u = x^2-y^2$ and imaginary part $v=2xy$ satisfy the Cauchy-Riemann equations,
 				since
@@ -357,41 +413,69 @@
 				<div class="w3-responsive">
 					$$f'(z)=u_x+iv_x = v_y - i u_y = 2x + i 2y = 2(x+iy) = 2z.$$
 				</div>
+				-->
 			</p>
 		</div>
 
 
 		<p>
-			Fortunately, the complex derivative obeys all of the usual rules that you learned in
+			幸运得是，复导数遵循你在实变量微积分种学习的所有一般定律。
+			例如,
+			<div class="w3-responsive">
+				$$\frac{d}{dz}z^n = nz^{n-1}, \quad \frac{d}{dz} e^{cz} = ce^{cz}, \quad \frac{d}{dz} \log z =
+				\frac{1}{z},$$
+			</div>
+			<!--Fortunately, the complex derivative obeys all of the usual rules that you learned in
 			real-variable calculus. For example,
 			<div class="w3-responsive">
 				$$\frac{d}{dz}z^n = nz^{n-1}, \quad \frac{d}{dz} e^{cz} = ce^{cz}, \quad \frac{d}{dz} \log z =
 				\frac{1}{z},$$
 			</div>
+			-->
+
 		</p>
 		<p>
-			and so on. Here, the power $n$ can be a real number (or even complex in view of the identity
-			$z^n = e^n \log z$), while $c$ is any complex constant. The <a href="complex_functions.html#trig-functions" target="_blank">exponential formulae</a>
-			for the complex trigonometric functions implies that they also satisfy the standard rules
+			等等。这里幂$n$可以是实数(考虑恒等式$z^n = e^n \log z$甚至可以是复数), 二 $c$ 是任何复常数。
+			复三角函数的 <a href="complex_functions.html#trig-functions" target="_blank">指数公式</a>
+			意味着他们也满足标准规则
 			<div class="w3-responsive">
 				$$\frac{d}{dz}\sin z= \cos z, \quad \frac{d}{dz} \cos z = -\sin z.$$
 			</div>
+
+			<!--and so on. Here, the power $n$ can be a real number (or even complex in view of the identity
+	$z^n = e^n \log z$), while $c$ is any complex constant. The <a href="complex_functions.html#trig-functions" target="_blank">exponential formulae</a>
+	for the complex trigonometric functions implies that they also satisfy the standard rules
+	<div class="w3-responsive">
+		$$\frac{d}{dz}\sin z= \cos z, \quad \frac{d}{dz} \cos z = -\sin z.$$
+	</div>
+	-->
 		</p>
 		<p>
-			The formulae for differentiating sums, products, ratios, inverses, and compositions of complex
+			复函数的和、差、比和复合的求导公式和其对应的实数运算相同，证明也类似。
+			因此，很幸运，进行复数微分不用学习新规则！
+
+			<!--The formulae for differentiating sums, products, ratios, inverses, and compositions of complex
 			functions are all identical to their real counterparts, with similar proofs. Thus, fortunately,
 			you don’t need to learn any new rules for performing complex differentiation!
+			-->
 		</p>
 
 		<hr>
 
-		<h2>Analytic functions</h2>
+		<h2>解析函数 Analytic functions</h2>
 
 		<p>
-			Let $f:A\rightarrow \mathbb C$ where $A\subset \mathbb C$ is an open set. The function is
-			said to be <em>analytic</em> on $A$ if $f$ is differentiable at each $z_0\in A$. The
-			word "holomorfic", which is sometimes used, is synonimous with the word "analytic". The phrase
-			<em>"analytic at $z_0$"</em> means $f$ is analytic on a neighborhood of $z_0$
+			令 $f:A\rightarrow \mathbb C$其中$A\subset \mathbb C$是开集。
+			函数被称为$A$上的 <em>解析函数</em>如果$f$ 在$z_0\in A$的所有电商可微。
+			有时会用"holomorfic", 和 "解析analytic"一个意思.
+
+			<em>"在$z_0$可解析"</em>以为着在 $z_0$的一个邻域 $f$可解析。
+
+			<!--Let $f:A\rightarrow \mathbb C$ where $A\subset \mathbb C$ is an open set. The function is
+	said to be <em>analytic</em> on $A$ if $f$ is differentiable at each $z_0\in A$. The
+	word "holomorfic", which is sometimes used, is synonimous with the word "analytic". The phrase
+	<em>"analytic at $z_0$"</em> means $f$ is analytic on a neighborhood of $z_0$
+	-->
 		</p>
 
 
