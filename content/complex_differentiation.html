@@ -174,9 +174,9 @@
 		<hr>
 
 		<p>
-			复导数的概念时整个复函数理论的基础。
+			复导数的概念是整个复函数理论的基础。
 			复微分的定义方式和常见的实函数导数的极限定义一样。
-			但虽然表面上相似，但实际上复微分是完全不同的理论。
+			虽然表面上相似，但实际上复微分的理论完全不同。
 			<!--The notion of the complex derivative is the basis of complex function theory. Complex
 		differentiation is defined in the same manner as the usual calculus limit definition
 		of the derivative of a real function. However, despite a superficial similarity, complex
@@ -185,7 +185,7 @@
 
 
 		<p>
-			复函数$f(z)$ 在点$z_0\in mathbb C$ <em>可微</em>当且仅当下列商的极限存在
+			复函数$f(z)$ 在点$z_0\in \mathbb C$ <em>可微</em>当且仅当下列商的极限存在
 			<div class="w3-responsive">
 				\begin{eqnarray}\label{diff01}
 				f'(z_0) = \lim_{z \rightarrow z_0} \frac{f(z)-f(z_0)}{z-z_0}.
@@ -201,9 +201,9 @@
 			</div>
 		</p>
 		<p>
-			我们经常去掉 $z_0$ 的下限并引入数
+			我们经常去掉 $z_0$ 的下标并引入数
 			\[\Delta w = f(z+\Delta z)-f(z).\]
-			表示$w=f(z)$对应与$f$取值的点上$\Delta z$变化的变化，则公式 (\ref{diff02})可以写成
+			表示$w=f(z)$对应于$f$取值的点上$\Delta z$变化的变化，则公式 (\ref{diff02})可以写成
 			\[\frac{d w}{d z}= \lim_{\Delta z \rightarrow 0}\frac{\Delta w}{\Delta z}.\]
 
 			<!--A complex function $f(z)$ is <em>differentiable</em> at a point $z_0\in \mathbb C$ if and only
@@ -233,9 +233,9 @@
 
 
 		<p>
-			虽然导数公式 (\ref{diff01})形式和实值函数的导数一样，但有个显著不懂$f'(z_0)$是个二维极限。
+			虽然导数公式 (\ref{diff01})的形式和实值函数的导数一样，但有显著不同，$f'(z_0)$是个二维极限。
 			这样$f'(z_0)$要存在，相关的极限必须和$z$趋于极限点 $z_0$的方向无关，总是存在。
-			实变量函数只有两个方向，也就是$x\lt x_0$ 和 $x\gt x_0$.
+			而实变量函数只有两个方向，也就是$x\lt x_0$ 和 $x\gt x_0$.
 
 			<!--Despite the fact that the formula (\ref{diff01}) for a derivative is identical in form to that of
 			the derivative of a real-valued function, a significant point to note is that $f'(z_0)$
@@ -265,7 +265,7 @@
 		</figure>
 
 		<p>
-			复函数的一个令人注目的特性是才能在一个复导数意味着存在无穷多个复导数。
+			复函数的一个令人注目的特性是有一个复导数意味着有无穷多个复导数。
 			这和实变量函数$g(x)$不一样，不存在$g''(x)$也可以存在$g'(x)$。
 			<!--A remarkable feature of complex differentiation is that the existence of one complex
 			derivative automatically implies the existence of infinitely many!
@@ -276,10 +276,30 @@
 
 		<hr>
 
-		<h2>Cauchy-Riemann equations</h2>
+		<h2>柯西黎曼公式 Cauchy-Riemann equations</h2>
 
 		<p>
-			To understand the consequences of this definition (\ref{diff01}), let us first see what happens when
+			要理解定义(\ref{diff01})的后果，我们首先看看我们从两个最简单的方向：水平方向和垂直方向趋于 $z_0$会发生生么情况。
+			如果我们设定
+			$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
+			则随着$h\rightarrow 0$ 沿着水平直线$z \rightarrow z_0$。
+			如果我们用实部和虚部写出
+			$$f(z) = u(x,y)+iv(x,y)$$
+			可得
+			$$f'(z_0)= \lim_{h \rightarrow 0}\frac{f(z_0+h)-f(z_0)}{h}$$
+			则
+			<div class="w3-responsive">
+				\begin{eqnarray*}
+				f'(z_0)&amp;= &amp; \lim_{h \rightarrow 0} \frac{f(z_0+h)-f(z_0)}{h} = \lim_{h \rightarrow 0}
+				\frac{f(x_0+h + iy_0)-f(x_0+iy_0)}{h} \\
+				&amp;= &amp; \lim_{h \rightarrow 0} \left[ \frac{u \left( x_0 +h, y_0 \right) - u \left( x_0 , y_0
+				\right)}{h}\right]+i \lim_{h \rightarrow 0} \left[ \frac{v \left( x_0 +h, y_0 \right) - v \left( x_0 ,
+				y_0 \right)}{h}\right] \\
+				&amp;= &amp; u_x(x_0, y_0)+ i v_x(x_0,y_0)
+				\end{eqnarray*}
+			</div>
+			
+			<!--To understand the consequences of this definition (\ref{diff01}), let us first see what happens when
 			we approach $z_0$ along the two simplest directions - horizontal and vertical. If
 			we set
 			$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
@@ -299,6 +319,7 @@
 				&amp;= &amp; u_x(x_0, y_0)+ i v_x(x_0,y_0)
 				\end{eqnarray*}
 			</div>
+			-->
 		</p>
 		<p>
 			where $u_x(x_0, y_0)$ and $v_x(x_0,y_0)$ denote the first-order partial derivatives with respect
