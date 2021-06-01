@@ -179,25 +179,25 @@
 
 		<h2>无穷点The Point to Infinity</h2>
 		<p>
-			有时候在点$z\in \mathbb C$之外引入 <em>无穷点</em>, 用 $\infty$表示，能带来很多方便。
+			有时候在点$z\in \mathbb C$之外引入用 $\infty$表示的 <em>无穷点</em>, 能带来很多方便。
 			这么做的时候必须小心，因为滥用符号$\infty$可能会带来混乱。
 			但如果我们想讨论无穷极限和无穷处的极限，小心使用这个概念会很有用。
 		</p>
 		<!--<p>For some purposes it is convenient to introduce the <em>point to infinity</em>, denoted by $\infty$, in addition to the points $z\in \mathbb C$. We must be careful in doing so, because it can lead to confusion an abuse of the symbol $\infty$. However, with care it can be useful, if we  want to be able to talk  about infinite limits and limits at infinity.</p>
 	-->
 		<p>
-			在实直线上可以加上$+\infty$ 和 $-\infty$，和实直线不同，我们在 $\mathbb C$上只有一个，原因是$\mathbb C$没有$\mathbb R$上所有的自然顺序。
+			在实直线上可以加上$+\infty$ 和 $-\infty$，但和实直线不同，在 $\mathbb C$上只有一个无穷大，原因是$\mathbb C$没有$\mathbb R$上所具有的自然顺序。
 			正式地说，我们在$\mathbb C$上加一个符号$\infty$就得到了 <em>扩展复平面</em>,  用$\mathbb C^*=\mathbb C \cup \{\infty\}$表示,并定义按以下规则用$\infty$进行运算：
 			\begin{eqnarray*}
 			z+\infty&amp;=&amp;\infty\\
-			z\cdot \infty&amp;=&amp;\infty \quad \quad \text{provided } z\neq 0\\
+			z\cdot \infty&amp;=&amp;\infty \quad \quad \text{只要 } z\neq 0\\
 			\infty+\infty&amp;=&amp;\infty\\
 			\infty\cdot\infty&amp;=&amp; \infty\\
 			\frac{z}{\infty}&amp;=&amp;0
 			\end{eqnarray*}
-			主意，对于$z\in \mathbb C$，有些运算是没有定义的：
+			注意，对于$z\in \mathbb C$，有些运算是没有定义的：
 			$$\frac{\infty}{\infty}\,,\quad 0\cdot \infty\,,\quad  \infty-\infty\,,$$
-			原因和在实数微积分里的原因一样。
+			原因和实数微积分里的原因一样。
 		</p>
 		<!--<p>
 		In contrast  to the real line, to which $+\infty$ and $-\infty$ can be added, we have only one $\infty$ for $\mathbb C$. The reason is that $\mathbb C$ has no natural ordering as $\mathbb R$ does. Formally we add a symbol $\infty$ to $\mathbb C$ to obtain the <em>extended complex plane</em>,  denoted by  $\mathbb C^*=\mathbb C \cup \{\infty\}$, and define operations with $\infty$ by the rules
@@ -213,12 +213,12 @@
 		and so forth are  for  the same reasons that they are in the calculus of real numbers.
 	</p>-->
 		<p>
-			扩展复平面可以被映射到一个球面上，该球面的南极对应于原点，而北极对应与$\infty$。
-			复平面上的所有其他点可以用下列方法以一对一的方式映射到球面上。
+			扩展复平面可以被映射到球面上，该球面的南极对应于原点，而北极对应与$\infty$。
+			复平面上的所有其他点可以用以下方法以一对一的方式映射到球面上。
 			将平面上的点 $z$和北极用直线连起来。
 			该直线和球面相交于点$P(z)$。
 			按这种方式，复平面上的每个点$z= x+iy$唯一地对应于球面上的一个点$P(z)$ 。
-			这种方法叫做<em>球面投影</em> 如下面的小程序所演示。
+			这种方法叫做<em>球面投影</em> ，如下面的小程序演示。
 		</p>
 		<!--<p>
 		The extended complex plane can be mapped onto the
@@ -249,9 +249,9 @@
 		</div>
 		<br>
 
-		<p>扩展复平面又是后也被称作 <em>压实的</em> (闭的)复平面。
+		<p>扩展复平面有时候也被称作 <em>压实的</em> (闭的)复平面。
 		用这种方法观察复平面经常会很有用，
-		在某些高级处理中知道构建球面投影很有价值。</p>
+		在某些高级处理中知道构建球面投影也很有价值。</p>
 		<!--<p>The extended complex plane is sometimes referred to as the <em>compactified</em> (closed) complex plane. It is often useful to view the complex plane in this way, and knowledge of the construction of the stereographic projection is valuable in certain advanced treatments.</p>-->
 
 		<p>
@@ -306,7 +306,7 @@
 
 			<p>
 				<strong>例 3:</strong>
-				对 $f(z)=e^z$, 定义在 $D=\{z\,:\,\textbf{Re}(z)>0\}$,我么有
+				对 $f(z)=e^z$, 定义在 $D=\{z\,:\,\textbf{Re}(z)>0\}$,我们有
 				$$\lim_{z\rightarrow \infty}f(z)=\infty.$$
 				实际上，对任意给定 $M>0$，只要$x>\ln M.$都有
 				$$\left|f(z)\right|=\left|e^z\right|=e^x>M$$
