@@ -176,7 +176,7 @@
 		<p>
 			复导数的概念是整个复函数理论的基础。
 			复微分的定义方式和常见的实函数导数的极限定义一样。
-			虽然表面上相似，但实际上复微分的理论完全不同。
+			虽然表面上相似，但实际上复微是个完全不懂的的理论。
 			<!--The notion of the complex derivative is the basis of complex function theory. Complex
 		differentiation is defined in the same manner as the usual calculus limit definition
 		of the derivative of a real function. However, despite a superficial similarity, complex
@@ -185,7 +185,7 @@
 
 
 		<p>
-			复函数$f(z)$ 在点$z_0\in \mathbb C$ <em>可微</em>当且仅当下列商的极限存在
+			复函数$f(z)$ 在点$z_0\in \mathbb C$ <em>可微</em>当且仅当下列差的商催在极限
 			<div class="w3-responsive">
 				\begin{eqnarray}\label{diff01}
 				f'(z_0) = \lim_{z \rightarrow z_0} \frac{f(z)-f(z_0)}{z-z_0}.
@@ -233,9 +233,9 @@
 
 
 		<p>
-			虽然导数公式 (\ref{diff01})的形式和实值函数的导数一样，但有显著不同，$f'(z_0)$是个二维极限。
+			虽然导数公式 (\ref{diff01})的形式和实值函数的导数完全一样，但要注意到有个有显著不同，$f'(z_0)$是个二维极限。
 			这样$f'(z_0)$要存在，相关的极限必须和$z$趋于极限点 $z_0$的方向无关，总是存在。
-			而实变量函数只有两个方向，也就是$x\lt x_0$ 和 $x\gt x_0$.
+			而正相反，实变量函数只有两个方向，也就是$x\lt x_0$ 和 $x\gt x_0$.
 
 			<!--Despite the fact that the formula (\ref{diff01}) for a derivative is identical in form to that of
 			the derivative of a real-valued function, a significant point to note is that $f'(z_0)$
@@ -265,7 +265,7 @@
 		</figure>
 
 		<p>
-			复函数的一个令人注目的特性是有一个复导数意味着有无穷多个复导数。
+			复函数的一个重要特性是存在一阶复导数意味着存在无穷阶个复导数。
 			这和实变量函数$g(x)$不一样，不存在$g''(x)$也可以存在$g'(x)$。
 			<!--A remarkable feature of complex differentiation is that the existence of one complex
 			derivative automatically implies the existence of infinitely many!
@@ -276,15 +276,15 @@
 
 		<hr>
 
-<<<<<<< HEAD
+
 		<h2>柯西黎曼公式 Cauchy-Riemann equations</h2>
 
 		<p>
-			要理解定义(\ref{diff01})的后果，我们首先看看我们从两个最简单的方向：水平方向和垂直方向趋于 $z_0$会发生生么情况。
+			要理解定义(\ref{diff01})的后果，首先看看从两个最简单的方向：水平方向和垂直方向趋于 $z_0$会发生生么情况。
 			如果我们设定
 			$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
 			则随着$h\rightarrow 0$ 沿着水平直线$z \rightarrow z_0$。
-			如果我们用实部和虚部写出
+			采用实部和虚部的方式可
 			$$f(z) = u(x,y)+iv(x,y)$$
 			可得
 			$$f'(z_0)= \lim_{h \rightarrow 0}\frac{f(z_0+h)-f(z_0)}{h}$$
@@ -300,71 +300,11 @@
 				\end{eqnarray*}
 			</div>
 			
-			<!--To understand the consequences of this definition (\ref{diff01}), let us first see what happens when
-			we approach $z_0$ along the two simplest directions - horizontal and vertical. If
-			we set
-=======
-		<h2>柯西-黎曼公式Cauchy-Riemann equations</h2>
-
-		<p>
-			要理解定义(\ref{diff01})的后果，让我们先看看沿着两个最简单的方向：水平和垂直方向趋于$z_0$会发生什么。
-			如果我们设
->>>>>>> a74400a910ef29363570e23f70f3b666915b3fe2
-			$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
-			则 $z \rightarrow z_0$ 随着$h\rightarrow 0$时沿着水平方向移动。
-			如果我们用实部和虚部表示
-			$$f(z) = u(x,y)+iv(x,y)$$
-			则
-			$$f'(z_0)= \lim_{h \rightarrow 0}\frac{f(z_0+h)-f(z_0)}{h}$$
-			那么
-			<div class="w3-responsive">
-				\begin{eqnarray*}
-				f'(z_0)&amp;= &amp; \lim_{h \rightarrow 0} \frac{f(z_0+h)-f(z_0)}{h} = \lim_{h \rightarrow 0}
-				\frac{f(x_0+h + iy_0)-f(x_0+iy_0)}{h} \\
-				&amp;= &amp; \lim_{h \rightarrow 0} \left[ \frac{u \left( x_0 +h, y_0 \right) - u \left( x_0 , y_0
-				\right)}{h}\right]+i \lim_{h \rightarrow 0} \left[ \frac{v \left( x_0 +h, y_0 \right) - v \left( x_0 ,
-				y_0 \right)}{h}\right] \\
-				&amp;= &amp; u_x(x_0, y_0)+ i v_x(x_0,y_0)
-				\end{eqnarray*}
-			</div>
-<<<<<<< HEAD
-			-->
-=======
-
-			<!--To understand the consequences of this definition (\ref{diff01}), let us first see what happens when
-	we approach $z_0$ along the two simplest directions - horizontal and vertical. If
-	we set
-	$$z= z_0 + h = (x_0+h)+iy_0,\quad h\in \mathbb R,$$
-	then $z \rightarrow z_0$ along a horizontal line as $h\rightarrow 0.$
-	If we write out
-	$$f(z) = u(x,y)+iv(x,y)$$
-	in terms of its real and imaginary parts, then
-	$$f'(z_0)= \lim_{h \rightarrow 0}\frac{f(z_0+h)-f(z_0)}{h}$$
-	then
-	<div class="w3-responsive">
-		\begin{eqnarray*}
-		f'(z_0)&amp;= &amp; \lim_{h \rightarrow 0} \frac{f(z_0+h)-f(z_0)}{h} = \lim_{h \rightarrow 0}
-		\frac{f(x_0+h + iy_0)-f(x_0+iy_0)}{h} \\
-		&amp;= &amp; \lim_{h \rightarrow 0} \left[ \frac{u \left( x_0 +h, y_0 \right) - u \left( x_0 , y_0
-		\right)}{h}\right]+i \lim_{h \rightarrow 0} \left[ \frac{v \left( x_0 +h, y_0 \right) - v \left( x_0 ,
-		y_0 \right)}{h}\right] \\
-		&amp;= &amp; u_x(x_0, y_0)+ i v_x(x_0,y_0)
-		\end{eqnarray*}
-	</div>-->
->>>>>>> a74400a910ef29363570e23f70f3b666915b3fe2
-		</p>
-		<p>
-			其中 $u_x(x_0, y_0)$ 和$v_x(x_0,y_0)$分别表示在$(x_0,y_0)处$函数$u$和$v$关于$x$的偏导 。
-			现在如果设
-			$$z = z_0+ik = x_0 + i(y_0+k), \quad k\in \mathbb R,$$
-			则随着$k\rightarrow 0$，沿着垂直线$z\rightarrow 0$ $k\rightarrow 0$。因此，我们有
-
-			<!--where $u_x(x_0, y_0)$ and $v_x(x_0,y_0)$ denote the first-order partial derivatives with respect
-	to $x$ of the function $u$ and $v$, respectively, at $(x_0, y_0)$.
-	If now we set
+			
+	如果我么设
 	$$z = z_0+ik = x_0 + i(y_0+k), \quad k\in \mathbb R,$$
-	then $z\rightarrow 0$ along a vertical line as $k\rightarrow 0$. Therefore, we also have
-	-->
+	即在$k\rightarrow 0$ 时沿着垂直线$z\rightarrow 0$. 这样我们也有
+	
 			<div class="w3-responsive">
 				\begin{eqnarray*}
 				f'(z_0)&amp;= &amp; \lim_{k \rightarrow 0} \frac{f(z_0+ik)-f(z_0)}{ik} = \lim_{k \rightarrow 0} \left[
@@ -432,7 +372,7 @@
 				$$z^2 = \left(x^2-y^2\right)+ i \left(2xy\right).$$
 				其实部$u = x^2-y^2$和虚部$v=2xy$满足柯西-黎曼公式，也就是
 				$$u_x=2x = v_y, \quad u_y = -2y = -v_x.$$
-				定理1意味着$f(z)=z^2$是可微的，其导数等于
+				由定理1可得$f(z)=z^2$是可微的，其导数等于
 				<div class="w3-responsive">
 					$$f'(z)=u_x+iv_x = v_y - i u_y = 2x + i 2y = 2(x+iy) = 2z.$$
 				</div>
@@ -452,7 +392,7 @@
 
 
 		<p>
-			幸运得是，复导数遵循你在实变量微积分种学习的所有一般定律。
+			幸运得是，复导数遵循你在实变量微积分中学习的所有一般定律。
 			例如,
 			<div class="w3-responsive">
 				$$\frac{d}{dz}z^n = nz^{n-1}, \quad \frac{d}{dz} e^{cz} = ce^{cz}, \quad \frac{d}{dz} \log z =
@@ -468,7 +408,7 @@
 
 		</p>
 		<p>
-			等等。这里幂$n$可以是实数(考虑恒等式$z^n = e^n \log z$甚至可以是复数), 二 $c$ 是任何复常数。
+			等等。这里幂$n$可以是实数(考虑恒等式$z^n = e^n \log z$甚至可以是复数),  $而c$ 是任何复常数。
 			复三角函数的 <a href="complex_functions.html#trig-functions" target="_blank">指数公式</a>
 			意味着他们也满足标准规则
 			<div class="w3-responsive">
@@ -499,10 +439,10 @@
 
 		<p>
 			令 $f:A\rightarrow \mathbb C$其中$A\subset \mathbb C$是开集。
-			函数被称为$A$上的 <em>解析函数</em>如果$f$ 在$z_0\in A$的所有电商可微。
+			函数被称为$A$上的 <em>解析函数</em>如果$f$ 在$z_0\in A$的所有点上可微。
 			有时会用"holomorfic", 和 "解析analytic"一个意思.
 
-			<em>"在$z_0$可解析"</em>以为着在 $z_0$的一个邻域 $f$可解析。
+			<em>"在$z_0$可解析"</em>得意思是在 $z_0$的一个邻域 $f$可解析。
 
 			<!--Let $f:A\rightarrow \mathbb C$ where $A\subset \mathbb C$ is an open set. The function is
 	said to be <em>analytic</em> on $A$ if $f$ is differentiable at each $z_0\in A$. The

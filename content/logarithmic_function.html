@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
 
@@ -180,11 +180,31 @@
 	<span id="next"><a href="riemann_surfaces.html">&rarr;</a></span><div class="clear"></div></p></header>
         
 
-<h1>The Logarithmic Function</h1>
+<h1>对数函数 The Logarithmic Function</h1>
 
 <hr>
 <div class="w3-responsive">
-<p>Consider $z$  any nonzero complex number. We would like to solve for $w$, the equation
+<p>考虑$z$为任意非零复数，我们可能想结出下列方程中的  $w$
+\begin{eqnarray}\label{log1}
+e^w=z.
+\end{eqnarray}
+如果 $\Theta=\textbf{Arg} (z)$ 其中 $-\pi &lt; \Theta \leq \pi$, 则 $z$ 和 $w$可以写成
+\begin{eqnarray*}
+z=re^{i\Theta} \quad \text{且}\quad w=u+iv.
+\end{eqnarray*}
+则方程 (\ref{log1}) 变成
+$$e^ue^{iv}=re^{i\Theta}.$$
+这样可得
+\begin{eqnarray*}
+e^u=r\quad\text{and}\quad v=\Theta +2n\pi
+\end{eqnarray*}
+其中 $n\in \mathbb Z $. 因为 $e^u=r$ 等同于 $u=\ln r$, 则可得公式(\ref{log1}) 满足当且仅当 $w$取下值之一
+\begin{eqnarray*}
+w=\ln r +i(\Theta + 2n\pi )\quad (n\in \mathbb Z ).
+\end{eqnarray*}
+
+<!--
+Consider $z$  any nonzero complex number. We would like to solve for $w$, the equation
 \begin{eqnarray}\label{log1}
 e^w=z.
 \end{eqnarray}
@@ -201,15 +221,22 @@ e^u=r\quad\text{and}\quad v=\Theta +2n\pi
 where $n\in \mathbb Z $. Since $e^u=r$ is the same as $u=\ln r$, it follows that equation (\ref{log1}) is satisfied if and only if $w$ has one of the values
 \begin{eqnarray*}
 w=\ln r +i(\Theta + 2n\pi )\quad (n\in \mathbb Z ).
-\end{eqnarray*}
+\end{eqnarray*}	
+-->
 </p>
 </div>
 
 <div class="w3-responsive">
-<p>Therefore, the (multiple-valued) logarithmic function of a nonzero complex variable $z=re^{i\Theta}$ is defined by the formula
+<p>因此，非零复变量$z=re^{i\Theta}$的（多值）对数函数被定义为公式
 \begin{eqnarray}\label{log2}
 \log z=\ln r +i\left(\Theta + 2n\pi \right)\quad \quad(n\in \mathbb Z ).
 \end{eqnarray}
+<!--
+Therefore, the (multiple-valued) logarithmic function of a nonzero complex variable $z=re^{i\Theta}$ is defined by the formula
+\begin{eqnarray}\label{log2}
+\log z=\ln r +i\left(\Theta + 2n\pi \right)\quad \quad(n\in \mathbb Z ).
+\end{eqnarray}	
+-->
 </p>
 </div>
 
@@ -217,27 +244,56 @@ w=\ln r +i(\Theta + 2n\pi )\quad (n\in \mathbb Z ).
 
 <div class="w3-padding w3-responsive">
 <p>
+<strong>例 1:</strong> $z=-1-\sqrt{3}i$，请计算$\log z$.<br><br>
+
+<em>解:</em> 如果 $z=-1-\sqrt{3}i$, 则 $r=2$ 且 $\Theta=-\frac{2\pi}{3}$.
+	因此
+$$\log(-1-\sqrt{3}i)=\ln 2 +i\left(-\frac{2\pi}{3}+2n\pi\right)=\ln 2 +2\left(n-\frac{1}{3}\right)\pi i$$
+其中 $n\in \mathbb Z .$
+
+<!--
+	
 <strong>Example 1:</strong> Calculate $\log z$ for $z=-1-\sqrt{3}i$.<br><br>
 
 <em>Solution:</em> If $z=-1-\sqrt{3}i$, then $r=2$ and $\Theta=-\frac{2\pi}{3}$. Hence
 $$\log(-1-\sqrt{3}i)=\ln 2 +i\left(-\frac{2\pi}{3}+2n\pi\right)=\ln 2 +2\left(n-\frac{1}{3}\right)\pi i$$
 with $n\in \mathbb Z .$
+-->
 </p>
 </div>
 
 <p>
+$\log z$的 <em>主值</em> of $\log z$ 是$n=0$时公式(\ref{log2})的值，用$\text{Log} \,z$表示.
+	这样
+$$\text{Log}\, z=\ln r +i\Theta .$$
+函数$\text{Log}\, z$ 在$z \neq 0$为良构且单值，而且
+$$\log z=\text{Log}\, z+2n\pi i\quad (n\in \mathbb Z )
+$$
+如果$z$是正实数，则简化成微积分中一般的对数函数。
+
+<!--
 The <em>principal value</em> of $\log z$ is the value obtained from equation (\ref{log2}) when $n = 0$
 and is denoted by $\text{Log} \,z$. Thus
 $$\text{Log}\, z=\ln r +i\Theta .$$
 The function $\text{Log}\, z$ is well defined and single-valued when $z\neq 0$ and that
 $$\log z=\text{Log}\, z+2n\pi i\quad (n\in \mathbb Z )
 $$
-This is reduced to the usual logarithm in calculus when $z$ is a positive real number.
+This is reduced to the usual logarithm in calculus when $z$ is a positive real number.	
+-->
 </p>
 
 <div class="w3-padding">
 <div class="w3-responsive">
 <p>
+<strong>例 2:</strong> 计算 $\log \left(1\right)$ 和d $\log \left(-1\right)$.<br><br>
+<em>解:</em> 从使 (\ref{log2})可得
+$$\log \left(1\right)=\ln 1+i\left(0+2n\pi\right)=2n\pi i\quad \quad(n\in \mathbb Z )
+$$
+和
+$$\log \left(-1\right)=\ln 1+i\left(\pi+2n\pi\right)=\left(2n+1\right)\pi i\quad \quad(n\in \mathbb Z )
+$$
+主意 that $\text{Log}\, (1)=0$ 且 $\text{Log}\, (-1)=\pi i$.
+<!--
 <strong>Example 2:</strong> Calculate $\log \left(1\right)$ and $\log \left(-1\right)$.<br><br>
 <em>Solution:</em> From expression (\ref{log2})
 $$\log \left(1\right)=\ln 1+i\left(0+2n\pi\right)=2n\pi i\quad \quad(n\in \mathbb Z )
@@ -245,41 +301,74 @@ $$
 and
 $$\log \left(-1\right)=\ln 1+i\left(\pi+2n\pi\right)=\left(2n+1\right)\pi i\quad \quad(n\in \mathbb Z )
 $$
-Notice that $\text{Log}\, (1)=0$ and $\text{Log}\, (-1)=\pi i$.
+Notice that $\text{Log}\, (1)=0$ and $\text{Log}\, (-1)=\pi i$.	
+-->
 </p>
 </div>
 </div>
 
 <div class="w3-responsive">
     <p>
-    Expression (\ref{log2}) is also equivalent to the following:
+    表达式 (\ref{log2})也等效于:
     \begin{eqnarray*}
     \log z&amp;=&amp;\ln |z| +i\,\textbf{arg} (z)\\
     &amp;=&amp;\ln |z| +i\,\textbf{Arg} (z)+2ni\,\pi \quad \quad(n\in \mathbb Z )
     \end{eqnarray*}
+	<!--
+	 Expression (\ref{log2}) is also equivalent to the following:
+    \begin{eqnarray*}
+    \log z&amp;=&amp;\ln |z| +i\,\textbf{arg} (z)\\
+    &amp;=&amp;\ln |z| +i\,\textbf{Arg} (z)+2ni\,\pi \quad \quad(n\in \mathbb Z )
+    \end{eqnarray*} 
+	-->
     </p>
 </div>
 
 <p>
+下面是$\log z$的一些基本性质:
+<ol>
+    <li> $\log \left(z_1 \,z_2\right)=\log z_1 + \log  z_2$ </li>
+    <li> $\log\left( \dfrac{z_1}{z_2}\right)=\log z_1 -\log z_2$</li>
+    <li>$\text{Log}\,\left(z_1 \,z_2\right)\neq \text{Log}\, z_1 + \text{Log}\,  z_2$有可能不成立</li>
+</ol>
+<!--
 Some basic properties of the function $\log z$ are the following:
 <ol>
     <li> $\log \left(z_1 \,z_2\right)=\log z_1 + \log  z_2$ </li>
     <li> $\log\left( \dfrac{z_1}{z_2}\right)=\log z_1 -\log z_2$</li>
     <li> There may hold $\text{Log}\,\left(z_1 \,z_2\right)\neq \text{Log}\, z_1 + \text{Log}\,  z_2$</li>
-</ol></p>
+</ol>	
+-->
+</p>
 
 
 <hr>
 
-<h2>Branches of Logarithms</h2>
+<h2>对数函数的分支 Branches of Logarithms</h2>
 
-<p>From definition (\ref{log2}) let $\theta = \Theta + 2n\pi$ ($n\in \mathbb Z$), so we can write
+<p>从定义 (\ref{log2}) 令 $\theta = \Theta + 2n\pi$ ($n\in \mathbb Z$), 则可以写
     \begin{eqnarray}\label{log30}
     \log z = \ln r +i\theta.
     \end{eqnarray}
+	<!--
+	 From definition (\ref{log2}) let $\theta = \Theta + 2n\pi$ ($n\in \mathbb Z$), so we can write
+    \begin{eqnarray}\label{log30}
+    \log z = \ln r +i\theta.
+    \end{eqnarray}
+	-->
 </p>
 <div class="w3-responsive">
-<p>Now, let $\alpha$ be any real number. If we restrict the value of $\theta$ so that $\alpha &lt; \theta &lt; \alpha + 2n\pi$ , then the function
+<p>现在，令 $\alpha$ 为任意实数. 如果我们对 $\theta$的值进行限制，使得  $\alpha &lt; \theta &lt; \alpha + 2n\pi$ , 则函数
+\begin{eqnarray}\label{log3}
+\log z=\ln r +i\theta \quad (r&gt; 0, \alpha &lt; \theta &lt; \alpha + 2\pi ),
+\end{eqnarray}
+其分量是
+\begin{eqnarray*}
+u(r, \theta)=\ln r, \quad v(r,\theta)=\theta,
+\end{eqnarray*}
+为给定定义域内的 <em>单值</em>连续函数 。
+<!--
+Now, let $\alpha$ be any real number. If we restrict the value of $\theta$ so that $\alpha &lt; \theta &lt; \alpha + 2n\pi$ , then the function
 \begin{eqnarray}\label{log3}
 \log z=\ln r +i\theta \quad (r&gt; 0, \alpha &lt; \theta &lt; \alpha + 2\pi ),
 \end{eqnarray}
@@ -287,11 +376,13 @@ with components
 \begin{eqnarray*}
 u(r, \theta)=\ln r, \quad v(r,\theta)=\theta,
 \end{eqnarray*}
-is a <em>single-value</em> and continuous function in the stated domain.
+is a <em>single-value</em> and continuous function in the stated domain.	
+-->
 </p>
 </div>
 
-<p>A <em>branch</em> of a multiple-valued function $f$ is any single-valued function $F$ that is analytic in some domain at each point $z$ of which the value $F(z)$ is one of the values of $f$. The requirement of analyticity, of course, prevents $F$ from taking on a random selection of the values of $f$.
+<p>多值函数$f$的 <em>分支</em> 是任意在某些定义域解析的单值函数$F$，其在没点 $z$上值 $F(z)$ 是 $f$的值中的一个. 
+	要求解析当然是未料防止$F$从 $f$的值中随意选择。
 
 <div class="w3-responsive">
 Observe that for each fixed α, the single-valued function (\ref{log3}) is a branch of the multiple-valued function (\ref{log30}). The function
@@ -299,6 +390,16 @@ Observe that for each fixed α, the single-valued function (\ref{log3}) is a bra
 \text{Log } z=\ln r +i\Theta \quad (r&gt; 0, -\pi &lt; \theta &lt; \pi ),
 \end{eqnarray}
 is called the principal branch.
+<!--
+A <em>branch</em> of a multiple-valued function $f$ is any single-valued function $F$ that is analytic in some domain at each point $z$ of which the value $F(z)$ is one of the values of $f$. The requirement of analyticity, of course, prevents $F$ from taking on a random selection of the values of $f$.
+
+<div class="w3-responsive">
+Observe that for each fixed α, the single-valued function (\ref{log3}) is a branch of the multiple-valued function (\ref{log30}). The function
+\begin{eqnarray}\label{log4}
+\text{Log } z=\ln r +i\Theta \quad (r&gt; 0, -\pi &lt; \theta &lt; \pi ),
+\end{eqnarray}
+is called the principal branch.	
+-->
 </p>
 </div>
 
